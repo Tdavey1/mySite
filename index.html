@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="resume">
 
 	<head>
 		<title>Taira's resume</title>
-        <base href="/sip/">
+		<base href="/resume/">
 		
 		<!-- bower:css -->
-
 		<!-- endbower -->
 		
 		<link rel="icon" href="images/birdNest4.ico" />
@@ -15,10 +14,24 @@
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
-</head>
-<body>
-<h1>Hello World!</h1>
-<h2>resume</h2>
 
-</body>
+	<body>
+		<h1>Hello World!</h1>
+		<h2>resume</h2>
+
+
+		<div ui-view class="container-fluid"></div>
+	</body>
+
+	<!-- bower:js -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<!-- endbower -->
+
+	<script src="app.js"></script>
+	<script src="controllers/skills.js"></script>
+
+
+
 </html>
