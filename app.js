@@ -1,6 +1,6 @@
 angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage'])//include plugins in an array on the first line
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-	$urlRouterProvider.otherwise("/resume");
+	$urlRouterProvider.otherwise("/about");
 	$locationProvider.html5Mode(true);
 
 
