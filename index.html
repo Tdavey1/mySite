@@ -1,35 +1,69 @@
 <!DOCTYPE html>
-<html ng-app="resume">
+<html ng-app="personalSite">
 
 	<head>
-		<title>Taira's resume</title>
+		<title>Taira's website</title>
 		<base href="/">
 		
 		<!-- bower:css -->
 		<!-- endbower -->
 		
-		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link ng-controller="StyleCtrl" href="{{'bower_components/bootstrap/dist/css/' + $storage.style + '.min.css'}}" rel="stylesheet">
 		
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
 
 	<body>
-		<h1>Hello World!</h1>
-		<h2>resume</h2>
 
+
+		<nav ng-controller="NavbarCtrl" class="navbar navbar-static-top navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" aria-controls="call-to-action" class="navbar-toggle" ng-click="isCollapsed=!isCollapsed">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Ploop</a>
+				</div>
+				
+				<div uib-collapse="isCollapsed" ng-click="isCollapsed=!isCollapsed" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li ui-sref-active="active"><a ui-sref="about">About</a></li>
+						<li ui-sref-active="active"><a ui-sref="resume">Resume</a></li>
+						<li ui-sref-active="active"><a ui-sref="projects">Projects</a></li>
+						<li class="nav-item dropdown-submenu" uib-dropdown is-open="status.isopen">
+							<a class="nav-link" href="#" uib-dropdown-toggle>Select style<span class="caret"></span></a>
+							<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+								<li ng-repeat="(key,value) in styles" role="menuitem"><a ng-click="changeStyle(value)" href="#">{{key}}</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
 
 		<div ui-view class="container-fluid"></div>
+
 	</body>
 
 	<!-- bower:js -->
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/ngstorage/ngStorage.js"></script>
 	<!-- endbower -->
 
 	<script src="app.js"></script>
-	<script src="controllers/skills.js"></script>
+	<script src="controllers/resume.js"></script>
+	<script src="controllers/navbar.js"></script>
+	<script src="controllers/about.js"></script>
+	<script src="controllers/projects.js"></script>
+	<script src="controllers/style.js"></script>
 
 
 

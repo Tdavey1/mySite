@@ -1,0 +1,79 @@
+<div class="page-header">
+	<h1>Resume</h1>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div>
+			<h2><strong>Education</strong></h2>
+		</div>
+	</div>
+	<div class="row" ng-repeat="education in education">
+		<div class="col-xs-3">
+			<h5><em>{{education.timeFrame}}</em></h5>
+		</div>
+		<div class="col-xs-9">
+			<ul class="list-unstyled">
+				<li>
+					<div>
+						<h4>
+						<strong>{{education.universityName}}</strong>, <small>{{education.collegeName}}, {{education.location}}</small>
+						</h4>
+						<p>{{education.degree}}	GPA: {{education.gpa}} <br>
+						{{education.award}}</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="container">
+	<div class="row">
+		<div>
+			<h2><strong>Experience</strong></h2>
+		</div>
+	</div>
+	<div class="row" ng-repeat="experience in experiences">
+		<div class="col-xs-3">
+			<h5><em>{{experience.timeFrame}}</em></h5>
+		</div>
+		<div class="col-xs-9">
+			<ul class="list-unstyled">
+				<li>
+					<div ng-repeat="experience in experiences">
+						<h4><strong>{{experience.jobTitle}}</strong></h4>
+						<p>{{experience.organization}}, {{experience.location}}</p>
+						<ul>
+							<li ng-repeat="description in experience.jobDescription">
+								{{description}}
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3">
+			<h2><strong>Skills</strong></h2>
+		</div>
+		<div class="col-xs-9">
+			<ul class="list-unstyled">
+				<li>
+					<h4><strong>Technologies</strong></h4>
+					<ul>
+						<li ng-repeat="technology in technologies">{{technology}}</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
