@@ -6,7 +6,7 @@ angular.module("personalSite")
 	$scope.education = { 
 		cornell: {
 			universityName:"Cornell University",
-			collegeName:"College of Agricultrue and Life Sciences",
+			collegeName:"College of Agriculture and Life Sciences",
 			degree:"Bachelor of Science in Biological Sciences, ",
 			minor: "Business minor",
 			gpa:3.54, 
