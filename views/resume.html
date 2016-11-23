@@ -42,7 +42,7 @@
 	<div ng-repeat="education in education">
 		<div class="row">
 			<div class="col-xs-8">
-				<h5>{{education.universityName}}</h5>
+				<h5><strong>{{education.universityName}}</strong></h5>
 			</div>
 			<div class="col-xs-4">
 				<h5 class="text-right"><small><em>{{education.timeFrame}}</em></small></h5>
@@ -50,10 +50,10 @@
 		</div>
 		<div>
 			<ul class="list-unstyled">
-				<li>{{education.collegeName + education.graduation}}</li>
-				<li>{{education.minor}}</li>
-				<li>{{education.award}}</li>
-				<li>GPA: {{education.gpa}}</li>
+				<li><p>{{education.collegeName + education.graduation}}</p></li>
+				<li><p>{{education.minor}}</p></li>
+				<li><p>{{education.award}}</p></li>
+				<li><p>GPA: {{education.gpa}}</p></li>
 			</ul>
 		</div>
 	</div>
