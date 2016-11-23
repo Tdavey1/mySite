@@ -3,10 +3,8 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage'])//inclu
 	$urlRouterProvider.otherwise("/about");
 //	$locationProvider.html5Mode(true);
 
-
 	//you define states in the config part of your app.js
 	$stateProvider
-
 	.state('resume', {
 		url: "/resume",
 		controller : 'ResumeCtrl',
@@ -22,7 +20,6 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage'])//inclu
 		controller : 'ProjectsCtrl',
 		templateUrl : 'views/projects.html'
 	})
-
 
 }).run(function($rootScope, $window, $sessionStorage) {
 	$sessionStorage.style = 'bootstrap'
