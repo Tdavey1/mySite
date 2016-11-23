@@ -1,7 +1,7 @@
 angular.module("personalSite")
 .controller("ResumeCtrl", function($scope,$http) {
 	
-	$scope.technologies = ["HTML","CSS","javascript","AngularJs","NodeJs","MySQL","python"];
+	$scope.technologies = ["HTML","CSS","JavaScript","AngularJS","Node.js","MySQL","Python"];
 
 	$scope.education = { 
 		cornell: {
@@ -22,19 +22,49 @@ angular.module("personalSite")
 		}
 	};
 
-	$scope.experiences = {
+	$scope.softwareExperiences = {
 		Queens: {
-			organization:"Stress in Pregnency (SIP) Study, Queens College",
 			jobTitle:"Project Manager",
-			location: "Queens, NY",
+			location: "Psychology department, Queens, NY",
 			timeFrame: "June 2016-November 2016",
-			jobDescription: [
-				"Managed team to develop an app for lab data entry",
-				"used HTML, Twitter bootstrap, AngularJs for the front end",
-				"used NodeJs, MySQL for the back end"
+			details: [
+				"Managed team to develop an app for data entry",
+				"Used HTML, Bootstrap, and AngularJs for the front end",
+				"Used Node.js and MySQL for the back end"
 				]
 		}
 	};
+
+	$scope.otherExperiences = {
+		cornellRA: {
+			jobTitle:"Research Assistant",
+			location: "Entomology department, Cornell University, Ithaca, NY",
+			timeFrame: "Spring 2015 – Spring 2016",
+			details: [
+				"Studied population dynamics of Musca Domesica",
+				"DNA extraction, PCR, Gel electrophoresis, DNA cloning"
+			]
+		},
+		broaderView: {
+			jobTitle:"A Broader View",
+			location: "La Ceiba, Honduras",
+			timeFrame: "Winter 2015",
+			details: [
+				"Assisted dentists in a dental clinic",
+				"Organize patient files"
+			]
+		},
+		queensRA: {
+			jobTitle:"Research Assistant",
+			location: "Psychology department, Queens College, Queens, NY",
+			timeFrame: "Summers 2012/2013",
+			details: [
+				"Studied effects of stress on children of pregnant women for longitudinal birth cohort study",
+				"Patient recruitment, tissue powderization and DNA extraction "
+			]
+		}
+	};
+
 
 	$scope.activities = {
 		redCross: {
@@ -44,11 +74,11 @@ angular.module("personalSite")
 				"Secretary Sept. 2013-May 2016",
 				"Blood drives, Disaster Action Team, community work"
 			],
-			date: "Sept. 2013-May 2016"
+			timeFrame: "Sept. 2013-May 2016"
 		},
 		Taekwondo: {
 			location: "Cornell University, Ithaca, NY",
-			date: "Sept. 2013-May 2016"
+			timeFrame: "Sept. 2013-May 2016"
 		}
 	}
 

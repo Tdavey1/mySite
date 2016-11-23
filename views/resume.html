@@ -57,20 +57,45 @@
 				<li>{{education.award}}</li>
 				<li>GPA: {{education.gpa}}</li>
 			</ul>
-
-
-
-			<p style="font-size:.8em">
-				{{education.collegeName}}<br>
-				{{education.degree + education.graduationDate}}<br>
-				{{education.minor}}<br>
-				{{education.award}}<br>
-				GPA: {{education.gpa}}
-			</p>
 		</div>
 	</div>
 </div>
 
+<div class="container col-xs-5 pull-left">
+	<div>
+		<h2><strong>Education</strong></h2>
+	</div>
+	<hr>
+	<ul>
+		<li ng-repeat="technology in technologies">{{technology}}</li>
+	</ul>
+
+</div>
+
+
+<div class="container col-xs-5 pull-left">
+	<div>
+		<h2><strong>Activities</strong></h2>
+	</div>
+	<hr>
+	<div ng-repeat="activity in activities">
+		<div class="row">
+			<div class="col-xs-8">
+				<h5><strong>{{activity.organization}}</strong></h5>
+			</div>
+			<div class="col-xs-4">
+				<h5 class="text-right"><small><em>{{activity.timeFrame}}</em></small></h5>
+			</div>
+		</div>
+
+		<div>
+			<p>{{activity.location}}
+			<ul>
+				<li ng-repeat="detail in activity.details">{{detail}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
 <div class="container col-xs-6 pull-right">
 	<div>
@@ -79,6 +104,66 @@
 	<hr>
 	<p>
 		I switched to web development from pre-med, because I enjoy coding more than anything I’ve done previously. Since I began programming, I have been very excited about the work that I am doing and will continue to do. People say that I am both a quick learner and highly motivated to improve. 
+	</p>
+</div>
+
+
+<div class="container col-xs-6 pull-right">
+	<div>
+		<h2><strong>Software Experience</strong></h2>
+	</div>
+	<hr>
+	<div ng-repeat="experience in softwareExperiences">
+		<div class="row">
+			<div class="col-xs-8">
+				<h5><strong>{{experience.jobTitle}}</strong></h5>
+			</div>
+			<div class="col-xs-4">
+				<h5 class="text-right"><small><em>{{experience.timeFrame}}</em></small></h5>
+			</div>
+		</div>
+
+		<div>
+			<p>{{experience.location}}
+			<ul>
+				<li ng-repeat="detail in experience.details">{{detail}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="container col-xs-6 pull-right">
+	<div>
+		<h2><strong>Other Experience</strong></h2>
+	</div>
+	<hr>
+	<div ng-repeat="experience in otherExperiences">
+		<div class="row">
+			<div class="col-xs-8">
+				<h5><strong>{{experience.jobTitle}}</strong></h5>
+			</div>
+			<div class="col-xs-4">
+				<h5 class="text-right"><small><em>{{experience.timeFrame}}</em></small></h5>
+			</div>
+		</div>
+
+		<div>
+			<p>{{experience.location}}
+			<ul>
+				<li ng-repeat="detail in experience.details">{{detail}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container col-xs-6 pull-right">
+	<div>
+		<h2><strong>Publications</strong></h2>
+	</div>
+	<hr>
+	<p>
+		Meisel et al. 2016. Is Multifactorial Sex Determination in the House Fly, Musca domestica (L.), Stable Over Time? <em>Journal of Heredity</em> 107 (7): 615-625 
 	</p>
 </div>
 
