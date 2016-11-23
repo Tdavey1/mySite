@@ -38,7 +38,7 @@
 	<div>
 		<h2><strong>Education</strong></h2>
 	</div>
-
+	<hr>
 	<div ng-repeat="education in education">
 		<div class="row">
 			<div class="col-xs-8">
@@ -48,16 +48,28 @@
 				<h5 class="text-right"><small><em>{{education.timeFrame}}</em></small></h5>
 			</div>
 		</div>
+
 		<div>
-			<p style="font-size:.8em">{{education.collegeName + education.graduation}}<br>
-			{{education.minor}}<br>
-			{{education.award}}<br>
-			GPA: {{education.gpa}}</p>
+			<ul style="font-size:.8em" class="list-unstyled">
+				<li>{{education.collegeName}}</li>
+				<li>{{education.degree + education.graduationDate}}</li>
+				<li>{{education.minor}}</li>
+				<li>{{education.award}}</li>
+				<li>GPA: {{education.gpa}}</li>
+			</ul>
+
+
+
+			<p style="font-size:.8em">
+				{{education.collegeName}}<br>
+				{{education.degree + education.graduationDate}}<br>
+				{{education.minor}}<br>
+				{{education.award}}<br>
+				GPA: {{education.gpa}}
+			</p>
 		</div>
 	</div>
 </div>
-
-
 
 
 <div class="container col-xs-6 pull-right">
