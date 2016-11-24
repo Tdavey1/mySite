@@ -4,6 +4,7 @@ angular.module('personalSite')
 
 	$scope.changeStyle = function(style) {
 		$sessionStorage.style = style;
+		$scope.isCollapsed=!$scope.isCollapsed;
 	}
 
 	$scope.styles = {
