@@ -63,7 +63,6 @@ angular.module("personalSite")
 		}
 	};
 
-
 	$scope.activities = {
 		redCross: {
 			organization: "Red Cross club",
