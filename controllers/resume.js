@@ -1,8 +1,6 @@
 angular.module("personalSite")
 .controller("ResumeCtrl", function($scope,$http) {
 	
-	$scope.technologies = ["HTML","CSS","JavaScript","AngularJS","Node.js","MySQL","Python"];
-
 	$scope.education = { 
 		cornell: {
 			universityName:"Cornell University",
@@ -81,5 +79,5 @@ angular.module("personalSite")
 			location: "Cornell University, Ithaca, NY",
 			timeFrame: "Sept. 2013-May 2016"
 		}
-	}
+	};
 });
