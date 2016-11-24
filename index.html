@@ -31,9 +31,15 @@
 
 				<div uib-collapse="isCollapsed" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li ui-sref-active="active"><a ui-sref="about">About</a></li>
-						<li ui-sref-active="active"><a ui-sref="resume">Resume</a></li>
-						<li ui-sref-active="active"><a ui-sref="projects">Projects</a></li>
+						<li ui-sref-active="active">
+							<a ng-click="isCollapsed=!isCollapsed" ui-sref="about">About</a>
+						</li>
+						<li ui-sref-active="active">
+							<a ng-click="isCollapsed=!isCollapsed" ui-sref="resume">Resume</a>
+						</li>
+						<li ui-sref-active="active">
+							<a ng-click="isCollapsed=!isCollapsed" ui-sref="projects">Projects</a>
+						</li>
 
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -46,25 +52,12 @@
 						  </ul>
 						</li>
 
-
-						<!--
 						<li class="nav-item dropdown-submenu" uib-dropdown is-open="status.isopen">
 							<a class="nav-link" href="#" uib-dropdown-toggle>Select style<span class="caret"></span></a>
 							<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-								<li ng-repeat="(key,value) in styles" role="menuitem"><a ng-click="changeStyle(value)" href="#">{{key}}</a></li>
+								<li ng-repeat="(key,value) in styles" role="menuitem"><a ng-click="changeStyle(value); isCollapsed=!isCollapsed" href="#">{{key}}</a></li>
 							</ul>
 						</li>
-
-						-->
-
-						<li dropdown>
-							<a href="#" dropdown-toggle>Dropdown<span class='caret'></span></a>
-							<ul class='dropdown-menu'>
-								<li ng-repeat="(key,value) in styles" role="menuitem"><a href="#">{{key}}</a></li>
-							</ul>
-						</li>
-
-
 
 					</ul>
 				</div>
