@@ -5,19 +5,20 @@ angular.module("personalSite")
 		cornell: {
 			universityName:"Cornell University",
 			collegeName:"College of Agriculture and Life Sciences",
-			degree:"Bachelor of Science in Biological Sciences, ",
+			degree:"BS in Biological Sciences",
 			minor: "Business minor",
 			gpa:3.54, 
 			timeFrame:"2013-2016", 
 			award:"Graduated cum laude with distinction in research",
 			graduationDate:"May 2016"
-		},
+		}/*,
 		NYU: {
 			universityName:"New York University",
 			collegeName:"College of Arts and Sciences",
 			gpa:3.36, 
 			timeFrame:"2012-2013"
 		}
+		*/
 	};
 
 	$scope.softwareExperiences = {
