@@ -21,7 +21,17 @@
 	</div>
 </div>
 
-	<div class="container col-sm-5">
+
+	<div class="container">
+		<div>
+			<h2><strong>About Me</strong></h2>
+		</div>
+		<hr>
+		<p>
+			I switched to programming from pre-med after taking a Python course, as I found it much more enjoyable than anything I'd done previously. It was definitely something I could visualize myself doing every day. Since graduating, I’ve devoted the majority of my time to learning new technologies and have gained experience by designing a database and data management app for a lab. I am very excited about the work I’m doing and eager to advance my skills in this arena. 
+		</p>
+
+
 		<div>
 			<h2><strong>Education</strong></h2>
 		</div>
@@ -47,7 +57,6 @@
 			</div>
 		</div>
 
-
 		<div>
 			<h2><strong>Technologies</strong></h2>
 		</div>
@@ -63,43 +72,6 @@
 			<li>SQL</li>
 			<li>Python</li>
 		</ul>
-
-		<div>
-			<h2><strong>Activities</strong></h2>
-		</div>
-		<hr>
-		<div ng-repeat="activity in activities">
-			<div class="row">
-				<div class="col-xs-6">
-					<h5><strong>{{activity.organization}}</strong></h5>
-				</div>
-				<div class="col-xs-6">
-					<h5 class="text-right"><small><em>{{activity.timeFrame}}</em></small></h5>
-				</div>
-			</div>
-
-			<div>
-				<p>{{activity.location}}</p>
-				<ul>
-					<li ng-repeat="detail in activity.details">{{detail}}</li>
-				</ul>
-			</div>
-		</div>
-
-
-	</div>
-
-
-	<div class="container col-sm-7">
-		<div>
-			<h2><strong>About Me</strong></h2>
-		</div>
-		<hr>
-		<p>
-			I switched to web development from pre-med, because I enjoy coding more than anything I’ve done previously. Since I began programming, I have been very excited about the work that I am doing and will continue to do. People say that I am both a quick learner and highly motivated to improve. 
-		</p>
-
-
 
 		<div>
 			<h2><strong>Software Experience</strong></h2>
