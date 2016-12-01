@@ -28,10 +28,6 @@
 			I switched to programming from pre-med after taking a Python course, as I found it much more enjoyable than anything I'd done previously. It was definitely something I could visualize myself doing every day. Since graduating, I’ve devoted the majority of my time to learning new technologies and have gained experience by designing a database and data management app for a lab. I am very excited about the work I’m doing and eager to advance my skills in this arena. 
 		</p>
 
-Cornell University, College of Agriculture and Life Sciences		    May 2016
-BS in Biological Sciences, Business Minor, GPA: 3.54
-Graduated cum laude with distinction in research
-
 		<div>
 			<h2><strong>Education</strong></h2>
 		</div>
@@ -39,10 +35,11 @@ Graduated cum laude with distinction in research
 		<div ng-repeat="education in education">
 			<div class="row">
 				<div class="col-xs-8">
-					<h5><strong>{{education.universityName}},<small>{{education.collegeName}}</small></strong></h5>
+					<h5><strong>{{education.universityName}}</strong>,
+					<small>{{education.collegeName}}</small></h5>
 				</div>
 				<div class="col-xs-4">
-					<h5 class="text-right"><small><em>{{education.gradutionDate}}</em></small></h5>
+					<h5 class="text-right"><small><em>{{education.graduationDate}}</em></small></h5>
 				</div>
 			</div>
 
@@ -77,7 +74,8 @@ Graduated cum laude with distinction in research
 		<div ng-repeat="experience in softwareExperiences">
 			<div class="row">
 				<div class="col-xs-5">
-					<h5><strong>{{experience.jobTitle}}</strong></h5>
+					<h5><strong>{{experience.jobTitle}}</strong>,
+					<small>{{experience.location}}</small></h5>
 				</div>
 				<div class="col-xs-7">
 					<h5 class="text-right"><small><em>{{experience.timeFrame}}</em></small></h5>
@@ -85,7 +83,6 @@ Graduated cum laude with distinction in research
 			</div>
 
 			<div>
-				<p>{{experience.location}}</p>
 				<ul>
 					<li ng-repeat="detail in experience.details">{{detail}}</li>
 				</ul>
@@ -100,7 +97,8 @@ Graduated cum laude with distinction in research
 		<div ng-repeat="experience in otherExperiences">
 			<div class="row">
 				<div class="col-xs-5">
-					<h5><strong>{{experience.jobTitle}}</strong></h5>
+					<h5><strong>{{experience.jobTitle}}</strong>,
+					<small>{{experience.location}}</small></h5>
 				</div>
 				<div class="col-xs-7">
 					<h5 class="text-right"><small><em>{{experience.timeFrame}}</em></small></h5>
@@ -108,7 +106,6 @@ Graduated cum laude with distinction in research
 			</div>
 
 			<div>
-				<p>{{experience.location}}</p>
 				<ul>
 					<li ng-repeat="detail in experience.details">{{detail}}</li>
 				</ul>

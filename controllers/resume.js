@@ -24,12 +24,13 @@ angular.module("personalSite")
 	$scope.softwareExperiences = {
 		Queens: {
 			jobTitle:"Project Manager",
-			location: "Psychology department, Queens, NY",
-			timeFrame: "June 2016-November 2016",
+			location: "Queens College",
+			timeFrame: "Jun. 2016 - present",
 			details: [
-				"Managed team to develop an app for data entry",
-				"Used HTML, Bootstrap, and AngularJs for the front end",
-				"Used Node.js and MySQL for the back end"
+				"Manage a team to design a database for existing data and develop an app that allows users to enter, edit, and view data",
+				"Uses long-polling to update data in real time and prevent double entry",
+				"Uses HTML, Bootstrap, and AngularJs for the front end",
+				"Uses Node.js and MySQL for the back end"
 				]
 		}
 	};
@@ -37,33 +38,26 @@ angular.module("personalSite")
 	$scope.otherExperiences = {
 		cornellRA: {
 			jobTitle:"Research Assistant",
-			location: "Entomology department, Cornell University, Ithaca, NY",
-			timeFrame: "Spring 2015 – Spring 2016",
+			location: "Cornell University",
+			timeFrame: "Apr. 2015 – May 2016",
 			details: [
-				"Studied population dynamics of Musca Domesica",
-				"DNA extraction, PCR, Gel electrophoresis, DNA cloning"
-			]
-		},
-		broaderView: {
-			jobTitle:"A Broader View",
-			location: "La Ceiba, Honduras",
-			timeFrame: "Winter 2015",
-			details: [
-				"Assisted dentists in a dental clinic",
-				"Organize patient files"
+				"Studied population dynamics of the housefly",
+				"Performed DNA extraction, PCR, Gel electrophoresis, DNA cloning"
 			]
 		},
 		queensRA: {
 			jobTitle:"Research Assistant",
-			location: "Psychology department, Queens College, Queens, NY",
-			timeFrame: "Summers 2012/2013",
+			location: "Queens College",
+			timeFrame: "Jun. – Aug. 2012 & 2013",
 			details: [
-				"Studied effects of stress on children of pregnant women for longitudinal birth cohort study",
-				"Patient recruitment, tissue powderization and DNA extraction "
+				"Studied effects of stress on children of pregnant women for a longitudinal birth cohort study",
+				"Recruited patients, powderized tissue, and extracted DNA"
 			]
 		}
 	};
 
+
+/*
 	$scope.activities = {
 		redCross: {
 			organization: "Red Cross club",
@@ -80,4 +74,5 @@ angular.module("personalSite")
 			timeFrame: "Sept. 2013-May 2016"
 		}
 	};
+*/
 });
