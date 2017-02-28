@@ -11,6 +11,11 @@ angular.module("personalSite")
 			timeFrame:"2013-2016", 
 			award:"Graduated cum laude with distinction in research",
 			graduationDate:"May 2016"
+		},
+		freeCodeCamp: {
+			universityName: "freeCodeCamp",
+			degrees: ["Front End Development Certification"],
+			graduationDate: "March 2016"
 		}/*,
 		NYU: {
 			universityName:"New York University",
@@ -21,7 +26,7 @@ angular.module("personalSite")
 		*/
 	};
 
-	$scope.softwareExperiences = {
+	$scope.workExperiences = {
 		Queens: {
 			jobTitle:"Project Manager",
 			location: "Queens College",
@@ -35,6 +40,30 @@ angular.module("personalSite")
 		}
 	};
 
+
+	$scope.personalProjects = {
+		ticTacToe: {
+			name:"Tic-Tac-Toe",
+			details: [
+				"Play tic-tac-toe with another person or a computer",
+				"Uses the minimax algorithm to calculate AI moves",
+				"Made with JavaScript, jQuery, and Bootstrap"
+			]
+		},
+		pomodoro: {
+			name: "Pomodoro Clock",
+			details: [
+				"User can set work time and break time",
+				"Cycles through work and break represented with different colors",
+				"Made with JavaScript, jQuery, and Bootstrap"
+			]
+		}
+	}
+
+
+
+
+/*
 	$scope.otherExperiences = {
 		cornellRA: {
 			jobTitle:"Research Assistant",
@@ -55,7 +84,7 @@ angular.module("personalSite")
 			]
 		}
 	};
-
+*/
 
 /*
 	$scope.activities = {

@@ -1,10 +1,16 @@
 <div class="container-fluid">
-	<div class='page-header'>
-		<div class='pull-right'>
-			<a class="btn btn-default" style="vertical-align: middle" target="_self" href="documents/resume.pdf" download="taira's_resume.pdf">Download</a>
 
+	<div class='page-header col-lg-offset-1 col-lg-10'>
+		<div class="row">
+			<div class="col-xs-9">
+				<h1>Resume</h1>
+			</div>
+
+			<div class="col-xs-3 download-container">
+				<a class="btn btn-default" target="_self" href="documents/resume.pdf" download="taira_resume.pdf">Download</a>
+
+			</div>
 		</div>
-		<h1>Resume</h2>
 
 	</div>
 </div>
@@ -20,41 +26,56 @@
 
 
 	<div class="container col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
-		<div>
-			<h2><strong>About Me</strong></h2>
+		<div class="section-heading-container">
+			<h3><strong>About Me</strong></h3>
 		</div>
-		<hr>
+		
 		<p>
-			I switched to programming from pre-med after taking a Python course, as I found it much more enjoyable than anything I'd done previously. It was definitely something I could visualize myself doing every day. Since graduating, I’ve devoted the majority of my time to learning new technologies and have gained experience by designing a database and data management app for a lab. I am very excited about the work I’m doing and eager to advance my skills in this arena. 
+			I switched to programming from pre-med because python was the first class I took where I would stay up late because I wanted to keep working. Since graduating, I’ve devoted the majority of my time to learning new technologies and have gained experience by designing a database and data management app for a lab as well as learning online through freeCodeCamp and codecademy. I am very excited about the work I’m doing and eager to advance my skills in this arena. 
 		</p>
 
-		<div>
-			<h2><strong>Education</strong></h2>
+		<div class="section-heading-container">
+			<h3><strong>Education</strong></h3>
 		</div>
-		<hr>
-		<div ng-repeat="education in education">
+		<div>
 			<div class="row">
 				<div class="col-xs-8">
-					<h5><strong>{{education.universityName}}</strong>,
-					<small>{{education.collegeName}}</small></h5>
+					<h5><strong>{{education.cornell.universityName}}</strong>,
+					<small>{{education.cornell.collegeName}}</small></h5>
 				</div>
 				<div class="col-xs-4">
-					<h5 class="text-right"><small><em>{{education.graduationDate}}</em></small></h5>
+					<h5 class="text-right"><small><em>{{education.cornell.graduationDate}}</em></small></h5>
 				</div>
 			</div>
 
 			<div>
 				<ul class="list-unstyled">
-					<li>{{education.degree}}, {{education.minor}}, GPA: {{education.gpa}}</li>
-					<li>{{education.award}}</li>
+					<li>{{education.cornell.degree}}, {{education.cornell.minor}}, GPA: {{education.cornell.gpa}}</li>
+					<li>{{education.cornell.award}}</li>
 				</ul>
 			</div>
 		</div>
 
 		<div>
-			<h2><strong>Technologies</strong></h2>
+			<div class="row">
+				<div class="col-xs-8">
+					<h5><strong>{{education.freeCodeCamp.universityName}}</strong></h5>
+				</div>
+				<div class="col-xs-4">
+					<h5 class="text-right"><small><em>{{education.freeCodeCamp.graduationDate}}</em></small></h5>
+				</div>
+			</div>
+
+			<div>
+				<ul class="list-unstyled">
+					<li ng-repeat="degree in education.freeCodeCamp.degrees">{{degree}}</li>
+				</ul>
+			</div>
 		</div>
-		<hr>
+
+		<div class="section-heading-container">
+			<h3><strong>Technologies</strong></h3>
+		</div>
 		<ul>
 			<li>HTML/CSS</li>
 			<li>JavaScript
@@ -67,11 +88,10 @@
 			<li>Python</li>
 		</ul>
 
-		<div>
-			<h2><strong>Software Experience</strong></h2>
+		<div class="section-heading-container">
+			<h3><strong>Work Experience</strong></h3>
 		</div>
-		<hr>
-		<div ng-repeat="experience in softwareExperiences">
+		<div ng-repeat="experience in workExperiences">
 			<div class="row">
 				<div class="col-xs-8">
 					<h5><strong>{{experience.jobTitle}}</strong>,
@@ -89,34 +109,18 @@
 			</div>
 		</div>
 
-
-		<div>
-			<h2><strong>Other Experience</strong></h2>
+		<div class="section-heading-container">
+			<h3><strong>Personal Projects</strong></h3>
 		</div>
-		<hr>
-		<div ng-repeat="experience in otherExperiences">
-			<div class="row">
-				<div class="col-xs-8">
-					<h5><strong>{{experience.jobTitle}}</strong>,
-					<small>{{experience.location}}</small></h5>
-				</div>
-				<div class="col-xs-4">
-					<h5 class="text-right"><small><em>{{experience.timeFrame}}</em></small></h5>
-				</div>
-			</div>
-
-			<div>
-				<ul>
-					<li ng-repeat="detail in experience.details">{{detail}}</li>
-				</ul>
-			</div>
+		<div ng-repeat="project in personalProjects">
+			<h5><strong>{{project.name}}</strong></h5>
+			<ul>
+				<li ng-repeat="detail in project.details">{{detail}}</li>
+			</ul>
 		</div>
 
-		<div>
-			<h2><strong>Publications</strong></h2>
-		</div>
-		<hr>
-		<p>
-			Meisel et al. 2016. "Is Multifactorial Sex Determination in the House Fly, Musca domestica (L.), Stable Over Time?"" <em>Journal of Heredity</em> 107 (7): 615-625 
-		</p>
+
+
 	</div>
+
+

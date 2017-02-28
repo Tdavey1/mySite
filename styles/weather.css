@@ -1,0 +1,72 @@
+.weather-carousel {
+  height:100%;
+  width:100%;
+}
+
+.app-container {
+  top:30px;
+  height:400px;
+  width:700px;
+}
+
+.form-container {
+  width:600px;
+}
+
+.option {
+  height:80%
+}
+
+.weather-container {
+  height:100%;
+}
+
+#location {
+  height:10%
+}
+#weather {
+  height:80%
+}
+
+#weather-form {
+  height:10%
+}
+
+.hidden {
+  display:none;
+}
+
+
+.data-container {
+  height:50%
+}
+
+.img-container {
+  height:50%
+}
+
+.owf {
+  color:white;
+}
+
+.black {
+  background-color:black;
+  border-radius:20px;
+}
+
+#location {
+  font-size:1.5em;
+  font-weight:bold;
+  color:white;
+}
+
+.desc {
+  font-size: 1.5em;
+  font-weight:bold;
+  color:white;
+  background-color:pink;
+}
+
+.red {
+  background-color:red;
+}

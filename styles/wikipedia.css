@@ -1,0 +1,60 @@
+
+.pink {
+  background-color:pink;
+}
+
+.blue {
+  background-color:blue;
+}
+
+.red {
+  background-color:red;
+}
+
+.grey {
+  background-color:grey;
+}
+
+.rounded {
+  border-radius:20px;
+  border:3px orange solid;
+}
+
+input {
+  text-align:center;
+}
+a {
+  color:black;
+}
+a:hover {
+  text-decoration:none;
+  color:black;
+}
+
+a:active, a:visited, a:link {
+  text-decoration:none;
+  color:black;
+}
+
+.page {
+  background-color:#D3D3D3;
+  border-radius:5px;
+  margin-top:3px;
+}
+
+.page:hover {
+  border:3px orange solid;
+}
+
+.page-img {
+  //height:30px;
+  //width:300px;
+  position:relative;
+  top:50%;
+}
+
+.img-cont {
+  position:relative;
+  top:30px;
+  height:100%;
+}

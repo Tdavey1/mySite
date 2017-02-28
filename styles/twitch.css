@@ -1,0 +1,79 @@
+.pink {
+  background-color:pink;
+}
+
+.red {
+  background-color:red;
+}
+
+.blue {
+  background-color:blue;
+}
+
+.orange {
+  background-color:orange;
+}
+
+body {
+  background-color:#001a33;
+}
+
+.twitch-container {
+  background-color:white;
+  border:5px #6441a5 solid;
+  border-radius:10px;
+}
+
+.streamer {
+  border:5px black solid;
+  border-radius:2px;
+  color:white;
+}
+
+.streamer:hover {
+  border-color:	#00008B;
+  transform: scale(1.01);
+}
+
+.not-exist {
+  background-color:grey;
+}
+
+.online {
+  background-color:#6441a4;
+}
+
+.offline {
+  background-color:#433f4a;
+}
+
+.user-img {
+  height:3em;
+}
+
+.circle-online {
+  border-radius:100%;
+  width:8px;
+  height:8px;
+  background-color:#7CFC00;
+  margin-top:3px;
+}
+.circle-offline {
+  border-radius:100%;
+  width:8px;
+  height:8px;
+  background-color:red;
+  margin-top:3px;
+}
+.circle-not-exist {
+  display:none;
+}
+
+.hidden {
+  display:none;
+}
+
+#display-options {
+  width:auto;
+  display:inline-block;
+}

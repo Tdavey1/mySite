@@ -1,5 +1,19 @@
 <div class="page-header">
 	<h1>My projects</h1>
 </div>
+<div class="btn btn-default" ng-show="viewProject" ng-click="changeDisplay()">go back</div>
+<div class="container" ng-show="viewAll">
+	<div class="col-xs-12 col-sm-6 col-lg-4" ng-repeat="project in projects">
+		<div class="panel panel-default" ng-click="changeDisplay()" ui-sref="{{project.sref}}">
+			<div class="panel-heading text-center">
+				{{project.name}}
+			</div>
+			<div class="panel-body">
+				<img class="img-responsive" src="{{project.img}}" />
+			</div>
+		</div>
 
-<p>I'll put stuff here soon, I promise</p>
+	</div>
+</div>
+
+<div ng-show="viewProject" ui-view class="container-fluid"></div>

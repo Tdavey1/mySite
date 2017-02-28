@@ -1,4 +1,4 @@
-angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage'])//include plugins in an array on the first line
+angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRouterStyles'])//include plugins in an array on the first line
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 	$urlRouterProvider.otherwise("/about");
 //	$locationProvider.html5Mode(true);
@@ -20,7 +20,50 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage'])//inclu
 		controller : 'ProjectsCtrl',
 		templateUrl : 'views/projects.html'
 	})
+	.state('projects.quote', {
+		url: "/projects/quote",
+		controller : 'QuoteCtrl',
+		templateUrl : 'views/quote.html',
+		data: {
+			css: 'styles/quote.css'
+		}
+	})
+	.state('projects.weather', {
+		url: "/projects/weather",
+		controller : 'WeatherCtrl',
+		templateUrl : 'views/weather.html',
+		data: {
+			css: ["styles/weather.css","https://websygen.github.io/owfont/css/owfont-regular.css"]
+		}
+	})
+	.state('projects.wikipedia', {
+		url: "/projects/wikipedia",
+		controller : 'WikipediaCtrl',
+		templateUrl : 'views/wikipedia.html',
+		data: {
+			css: 'styles/wikipedia.css'
+		}
+	})
+	.state('projects.twitch', {
+		url: "/projects/twitch",
+		controller : 'TwitchCtrl',
+		templateUrl : 'views/twitch.html',
+		data: {
+			css: 'styles/wikipedia.css'
+		}
+	})
+	.state('projects.calculator', {
+		url: "/projects/calculator",
+		controller : 'CalculatorCtrl',
+		templateUrl : 'views/Calculator.html'
+	})
+	.state('projects.pomodoro', {
+		url: "/projects/pomodoro",
+		controller : 'PomodoroCtrl',
+		templateUrl : 'views/pomodoro.html'
+	})
+
 
 }).run(function($rootScope, $window, $sessionStorage) {
-	$sessionStorage.style = 'bootstrap'
+
 })
