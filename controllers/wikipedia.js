@@ -37,16 +37,17 @@ var search = function(val) {
 }
 
 var appendData = function(title,content,pageID,image) {
-  $("#resultsContainer").append("<a href='https://en.wikipedia.org/?curid="+ pageID +"' target='_blank'><div class='container page'><div class='row align-items-center'><div class='col-xs-10'><h4>"+title+"</h4><p>"+content+"</p></div><div class='col-xs-2 img-cont red'><img src='"+ image +"' class='img-thumbnail page-img img-responsive'></div></div></div></a>")
+  $("#resultsContainer").append("<a href='https://en.wikipedia.org/?curid="+ pageID +"' target='_blank'><div class='container mt-3 page'><div class='row align-items-center'><div class='col-11'><h4>"+title+"</h4><p>"+content+"</p></div><div class='col-1'><img src='"+ image +"' class='img-thumbnail rounded mx-auto d-block'></div></div></div></a>")
 }
 
-
+$(document).ready(function() {
   $('#form').on('submit', function(e) {
     e.preventDefault();
     $('#resultsContainer').empty();
     var searchVal = $('#search').val();
     search(searchVal);
   })
+})
 
 
 });

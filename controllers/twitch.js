@@ -34,7 +34,7 @@ var streamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck
 
 // adds html for a user
 var addUser = function(status,user,game,desc,img) {
-  $('.streamers-container').append("<div class='streamer mb-2 " + status + " container'><div class='row align-items-center'><div class='col-2 text-center align-items-center'><img class='img-responsive user-img' src='"+img+"'></div><div class='col-3'>"+user+"</div><div class='col'><div class='row align-items-center'><div class='col'><h5 class='mb-0'>"+game+"</h5><p class='m-0'>"+desc+"</p></div></div></div><div class='col-2'><div class='row align-items-center'><div class='circle-"+status+"'></div><div class='ml-2'>"+status+"<div></div></div></div></div>");
+  $('.streamers-container').append("<div class='streamer mb-2 " + status + " container'><div class='row align-items-center'><div class='col-2 text-center align-items-center'><img class='img-fluid user-img' src='"+img+"'></div><div class='col-3'>"+user+"</div><div class='col'><div class='row align-items-center'><div class='col'><h5 class='mb-0'>"+game+"</h5><p class='m-0'>"+desc+"</p></div></div></div><div class='col-2'><div class='row align-items-center'><div class='circle-"+status+"'></div><div class='ml-2'>"+status+"<div></div></div></div></div>");
 }
 
 
@@ -77,5 +77,6 @@ $('#view-offline').on('click', function() {
     $(this).slideDown(400);
   })
 })
+
 
 });

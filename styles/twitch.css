@@ -14,8 +14,9 @@
   background-color:orange;
 }
 
-body {
+.background {
   background-color:#001a33;
+  height:100%
 }
 
 .twitch-container {
@@ -31,7 +32,7 @@ body {
 }
 
 .streamer:hover {
-  border-color:	#00008B;
+  border-color: #00008B;
   transform: scale(1.01);
 }
 

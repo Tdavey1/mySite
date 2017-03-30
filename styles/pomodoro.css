@@ -1,0 +1,235 @@
+.ball {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 45%;
+  position: relative;
+  box-shadow: -40px 10px 70px 10px rgba(0,0,0,0.5) inset;
+}
+
+.red {
+  background: radial-gradient(circle at 50% 80%, #ff917e, #ff8e79 10%, #ff6347 66%, #cc4f38 100%);
+}
+
+.green {
+  background: radial-gradient(circle at 50% 80%, #7eff91, #79ff8e 10%, #47ff63 66%, #38cc4f 100%);
+}
+
+.ball .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+  -webkit-transform: rotateX(90deg) translateZ(-150px);
+  -moz-transform: rotateX(90deg) translateZ(-150px);
+  -ms-transform: rotateX(90deg) translateZ(-150px);
+  -o-transform: rotateX(90deg) translateZ(-150px);
+  transform: rotateX(90deg) translateZ(-150px);
+  z-index: -1;
+}
+
+.hidden {
+  display:none;
+}
+
+.triangle {
+  position: relative;
+  background-color: white;
+  bottom:140px;
+  left:162px;
+}
+.triangle:before,
+.triangle:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+  width:  10px;
+  height: 10px;
+  border-top-right-radius: 30%;
+}
+
+.triangle {
+  transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+  transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+#divider {
+  position:relative;
+  background-color:black;
+  height:.45em;
+  width:300px;
+  bottom:150px;
+}
+
+#interval {
+  position:relative;
+  width:89em;
+  bottom:150px;
+  right:1240px;
+}
+
+#cover-left {
+  position:relative;
+  height:30px;
+  width:50px;
+  bottom:248px;
+  left:282px;
+  transform: rotate(73deg);
+  z-index:2;
+}
+
+#cover-right {
+  position:relative;
+  height:30px;
+  width:50px;
+  bottom:278px;
+  right:32px;
+  transform: rotate(-73deg);
+  z-index:2;
+}
+#clock-container {
+  position:relative;
+  bottom:190px;
+  left:92px;
+  width:150px;
+}
+#clock {
+  display:inline-block;
+  border-radius:10%;
+  height:50px;
+  max-width:150px;
+  font-size:30px;
+}
+
+.point {
+  position:relative;
+  height:8px;
+  width:8px;
+  margin:3px;
+  border-radius:50%;
+  background-color:black;
+  display:inline-block;
+}
+
+.line {
+  position:relative;
+  height:20px;
+  width:8px;
+  margin:3px;
+  border-radius:35%;
+  background-color:black;
+  display:inline-block;
+}
+
+.percent {
+  position:relative;
+  height:20px;
+  width:40px;
+  margin:-20px;
+  background-color:#ffdab9;
+  display:inline-block;
+  bottom:40px;
+  right:7px;
+  font-weight:bold;
+  text-align: center;
+  border-radius:5px;
+  z-index:1;
+}
+
+.percent:after {
+   content:"";
+   position:absolute;
+   top:20px;
+   right:14px;
+   border-left: 7px solid transparent;
+   border-top: 13px solid #ffdab9;
+   border-right: 7px solid transparent;
+}
+
+.stage {
+  position:relative;
+  width: 300px;
+  height: 250px;
+  margin: auto;
+  overflow:hidden;
+  z-index:0;
+}
+
+.down {
+  margin-top:10%;
+}
+
+.controls {
+  position:relative;
+  top:20px;
+}
+
+#timerSelect {
+  margin:auto;
+  position:relative;
+  width:200px;
+  top:30px;
+}
+
+.op {
+  border-radius:50%;
+  border:2px white solid;
+  position:absolute;
+  top:40px;
+  width:30px;
+  height:30px;
+}
+
+#workAdd {
+  background-color:#7fff7f;
+  left:58px;
+}
+
+#workSub {
+  background-color:#ff7f7f;
+  right:58px;
+}
+
+#breakAdd {
+  background-color:#7fff7f;
+  left:58px;
+}
+
+#breakSub {
+  background-color:#ff7f7f;
+  right:58px;
+}
+
+#workTime {
+}
+
+.time {
+  border-radius:15%;
+  height:40px;
+  background-color:#ffdb99;
+}
+
+
+#breakTime {
+}
+
+.op {
+  position:absolute;
+}
+
+/*
+thanks to Murray Smith for rounded triangle
+http://stackoverflow.com/users/888928/murray-smith
+
+
+*/

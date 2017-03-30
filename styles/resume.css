@@ -1,0 +1,20 @@
+.section-heading-container {
+	border-bottom:2px grey solid;
+	margin-bottom:10px;
+}
+
+.page-header {
+	border-bottom:2px #f6f6f6 solid;
+	padding: 10px 0 10px 0;
+	margin: 0 auto 10px auto;
+}
+
+.cyan {
+	background-color:cyan;
+}
+.red {
+	background-color:red;
+}
+.orange {
+	background-color:orange;
+}

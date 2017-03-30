@@ -36,6 +36,23 @@
   display:none;
 }
 
+.pink {
+  background-color:pink;
+}
+.orange {
+  background-color:orange;
+}
+
+.red {
+  background-color:red;
+}
+.blue {
+  background-color:blue;
+}
+
+.grey {
+  background-color:grey;
+}
 
 .data-container {
   height:50%
@@ -64,9 +81,4 @@
   font-size: 1.5em;
   font-weight:bold;
   color:white;
-  background-color:pink;
-}
-
-.red {
-  background-color:red;
 }

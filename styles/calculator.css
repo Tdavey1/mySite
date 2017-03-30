@@ -70,7 +70,7 @@
   background-color:#CD853F;
   border-radius:100%;
   box-shadow:0 20px 22px -2px #888888, inset 0px -4px 70px .5px #8B4513;
-  z-index:-1;
+  z-index:0;
 }
 .ear-left {
   right:4em;
@@ -171,7 +171,7 @@
   z-index:0;
 }
 .values {
-  background-color:	#DEB887;
+  background-color: #DEB887;
   height:15em;
   border-radius:10px;
   top:3.7em;
@@ -185,17 +185,13 @@
   padding:0px;
 }
 
-.red {background-color:red;}
-.pink {background-color:pink;}
-.orange {background-color:orange;}
-
 .value {
   width:3em;
   height:2.5em;
   border-radius:5px;
   margin:auto;
   color:black;
-  background: linear-gradient(to bottom, #FFDEAD 80%,	#FFF8DC 99%);
+  background: linear-gradient(to bottom, #FFDEAD 80%, #FFF8DC 99%);
   box-shadow: 0 2px 2px #000000;
 }
 .value:active {

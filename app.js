@@ -49,18 +49,24 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRoute
 		controller : 'TwitchCtrl',
 		templateUrl : 'views/twitch.html',
 		data: {
-			css: 'styles/wikipedia.css'
+			css: 'styles/twitch.css'
 		}
 	})
 	.state('projects.calculator', {
 		url: "/projects/calculator",
 		controller : 'CalculatorCtrl',
-		templateUrl : 'views/Calculator.html'
+		templateUrl : 'views/Calculator.html',
+		data: {
+			css: 'styles/calculator.css'
+		}
 	})
 	.state('projects.pomodoro', {
 		url: "/projects/pomodoro",
 		controller : 'PomodoroCtrl',
-		templateUrl : 'views/pomodoro.html'
+		templateUrl : 'views/pomodoro.html',
+		data: {
+			css: 'styles/pomodoro.css'
+		}
 	})
 
 

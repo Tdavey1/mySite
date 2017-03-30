@@ -1,19 +1,23 @@
 <div class="page-header">
 	<h1>My projects</h1>
 </div>
-<div class="btn btn-default" ng-show="viewProject" ng-click="changeDisplay()">go back</div>
-<div class="container" ng-show="viewAll">
-	<div class="col-xs-12 col-sm-6 col-lg-4" ng-repeat="project in projects">
-		<div class="panel panel-default" ng-click="changeDisplay()" ui-sref="{{project.sref}}">
-			<div class="panel-heading text-center">
-				{{project.name}}
-			</div>
-			<div class="panel-body">
-				<img class="img-responsive" src="{{project.img}}" />
-			</div>
-		</div>
+<div class="btn btn-secondary" ng-show="viewProject" ng-click="changeDisplay()">go back</div>
 
+<div ng-repeat="library in libraries" class="text-center project-container" ng-show="viewAll">
+<div class="logo-container">
+	<!--<h3 ng-style={'color':library.color}>{{library.name}}</h3>-->
+	<img class="logo" ng-src="{{library.img}}" />
+</div>
+	<div class="card project" ng-click="changeDisplay()" ui-sref="{{project.sref}}" 
+ ng-repeat="project in library.projects">
+
+		<img class="card-img-top img-fluid" ng-src="{{project.img}}" alt="Card image cap">
+		<div class="card-footer text-center">
+			<small class="text-muted">{{project.name}}</small>
+		</div>
 	</div>
+
 </div>
 
-<div ng-show="viewProject" ui-view class="container-fluid"></div>
+
+<div ng-show="viewProject"  ui-view class="card card-block bg-faded"></div>

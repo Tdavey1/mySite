@@ -1,17 +1,14 @@
 <div class="container-fluid">
 
-	<div class='page-header col-lg-offset-1 col-lg-10'>
-		<div class="row">
-			<div class="col-xs-9">
+	<div class='page-header offset-lg-1 col-lg-10'>
+		<div class="row justify-content-between align-items-center">
+			<div class="col">
 				<h1>Resume</h1>
 			</div>
-
-			<div class="col-xs-3 download-container">
-				<a class="btn btn-default" target="_self" href="documents/resume.pdf" download="taira_resume.pdf">Download</a>
-
+			<div class="col text-right">
+				<a class="btn btn-secondary" target="_self" href="documents/resume.pdf" download="taira_resume.pdf">Download</a>
 			</div>
 		</div>
-
 	</div>
 </div>
 
@@ -25,7 +22,7 @@
 </div>
 
 
-	<div class="container col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+	<div class="container offset-md-1 col-md-10 offset-lg-2 col-lg-8">
 		<div class="section-heading-container">
 			<h3><strong>About Me</strong></h3>
 		</div>
@@ -39,11 +36,11 @@
 		</div>
 		<div>
 			<div class="row">
-				<div class="col-xs-8">
+				<div class="col-8">
 					<h5><strong>{{education.cornell.universityName}}</strong>,
 					<small>{{education.cornell.collegeName}}</small></h5>
 				</div>
-				<div class="col-xs-4">
+				<div class="col-4">
 					<h5 class="text-right"><small><em>{{education.cornell.graduationDate}}</em></small></h5>
 				</div>
 			</div>
@@ -58,10 +55,10 @@
 
 		<div>
 			<div class="row">
-				<div class="col-xs-8">
+				<div class="col-8">
 					<h5><strong>{{education.freeCodeCamp.universityName}}</strong></h5>
 				</div>
-				<div class="col-xs-4">
+				<div class="col-4">
 					<h5 class="text-right"><small><em>{{education.freeCodeCamp.graduationDate}}</em></small></h5>
 				</div>
 			</div>
@@ -93,11 +90,11 @@
 		</div>
 		<div ng-repeat="experience in workExperiences">
 			<div class="row">
-				<div class="col-xs-8">
+				<div class="col-8">
 					<h5><strong>{{experience.jobTitle}}</strong>,
 					<small>{{experience.location}}</small></h5>
 				</div>
-				<div class="col-xs-4">
+				<div class="col-4">
 					<h5 class="text-right"><small><em>{{experience.timeFrame}}</em></small></h5>
 				</div>
 			</div>
