@@ -1,0 +1,120 @@
+.game-container {
+	background-image:url("http://www.pixeden.com/media/k2/galleries/220/002-wood-melamine-subttle-pattern-background-pat.jpg");
+	border-radius: 5px;
+	padding:1em;
+	height: 38em;
+	width:32em;
+}
+
+#board {
+	width:30em;
+	height:30em;
+	margin:auto;
+}
+
+.cell {
+	display: inline-block;
+	height:10em;
+	width:10em;
+	margin:0;
+	vertical-align: top;
+}
+
+.information-container {
+	width: 30em;
+	padding: 1em;
+	margin:auto;
+	text-align: center;
+	background-color: #ffdab9;
+	border-radius: 5px 5px 0 0;
+	margin-bottom: 5px;
+}
+
+.hidden {
+	display: none;
+}
+
+.game-options {
+	margin: auto;
+}
+
+.game-status {
+	margin: auto;
+}
+
+.vertical-line {
+	width: 1em;
+	position: absolute;
+	bottom:1.7em;
+	border-radius: 5px;
+}
+
+#left {
+	left:10.5em;
+
+}
+
+#right {
+	left:20.5em;
+
+}
+
+#top {
+	bottom:11.2em;
+}
+
+#bottom {
+	bottom:21.2em;
+}
+
+.horizontal-line {
+	height: 1em;
+	position: absolute;
+	border-radius: 5px;
+}
+
+.x {
+	position: relative;
+	margin: auto;
+	left:4.5em;
+	top: 1.5em;
+
+}
+
+.left-x-cont {
+	position:absolute;
+	margin:auto;
+	height:120px;
+	width:20px;
+	transform: rotate(45deg);
+
+}
+
+.right-x-cont {
+	position:absolute;
+	margin: auto;
+	height:120px;
+	width:20px;
+	transform: rotate(-45deg);
+}
+
+
+.left-x {
+	background-color:black;
+	height:100%;
+	display:none;
+}
+
+.right-x {
+	background-color:black;
+	height:100%;
+	display:none;
+}
+
+.circle {
+	position: relative;
+	top: 1.5em;
+	margin: auto;
+	width: 120px;
+	height: 120px;
+}

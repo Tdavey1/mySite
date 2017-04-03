@@ -1,0 +1,74 @@
+<div class="container-fluid game-container">
+
+	<div class="information-container">
+		<form id="setup-form" class="game-options">
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="radio" name="vs" value="person" checked> Person
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="vs" value="computer"> Computer
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="radio" name="firstMove" value="true" checked> Go first
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="firstMove" value="false"> Go second
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="radio"  name="symbol" value="x"checked> X
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="symbol" value="y"> O
+					</label>
+				</div>
+			</div>
+			<div class="form-actions text-center">
+				<input type="submit" value="Start game" class="btn btn-default" />
+			</div>
+
+		</form>
+
+		<div class="game-status hidden">
+			<div class="row align-items-center">
+				<div id="status-container" class="col-6">
+				</div>
+				<div class="col">
+					<div id="restart" class="btn btn-primary">Restart</div>
+				</div>
+				<div class="col">
+					<div id="reset" class="btn btn-primary">Reset</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="board" class="">
+		<div ng-repeat="i in [0,1,2,3,4,5,6,7,8]" id="{{i}}"" class="cell">
+			<div class="x">
+				<div class="left-x-cont">
+					<div class="left-x"></div>
+				</div>
+				<div class="right-x-cont">
+					<div class="right-x"></div>
+				</div>
+			</div>
+
+			<div class="circle"></div>
+		</div>
+		<div id="left" class="vertical-line"></div>
+		<div id="right" class="vertical-line"></div>
+		<div id="top" class="horizontal-line"></div>
+		<div id="bottom" class="horizontal-line"></div>
+	</div>
+
+</div>

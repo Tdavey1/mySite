@@ -55,8 +55,8 @@ angular.module('personalSite')
 
 				{
 					name: "Tic-Tac-Toe",
-					img: "images/weather.png",
-					sref: ".tictactoe"
+					img: "images/ticTacToe.png",
+					sref: ".ticTacToe"
 				}
 
 			]
