@@ -47,6 +47,7 @@
 	position: absolute;
 	bottom:1.7em;
 	border-radius: 5px;
+	background-color: black;
 }
 
 #left {
@@ -71,6 +72,7 @@
 	height: 1em;
 	position: absolute;
 	border-radius: 5px;
+	background-color: black;
 }
 
 .x {
