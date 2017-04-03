@@ -61,6 +61,7 @@ angular.module('personalSite')
 			var game = this;
 			this.restartGame = function() {
 				this.resetBoard();
+				$("board").off("click");
 				this.complete = false;
 				if (setup.firstMove==="true") {
 					this.myTurn = true;
@@ -72,6 +73,7 @@ angular.module('personalSite')
 					$("#status-container").text(msg);
 				}
 				this.board = new Board([undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined]);
+				this.startGame();
 			}
 			this.resetAll = function() {
 				this.restartGame();
@@ -170,6 +172,19 @@ angular.module('personalSite')
 
 			this.vsComputer = function() {
 				var game = this;
+				if (!game.myTurn) {
+					var msg = game.symbol + "'s turn";
+					$("#status-container").text(msg);
+					setTimeout(function() {
+						game.opponent.makeMyMove(game.board)
+						game.myTurn = !game.myTurn;
+						var msg = game.symbol + "'s turn";
+						$("#status-container").text(msg);
+					},1000)
+
+				}
+
+
 				$("#board").on("click", '.cell', function() {
 					var cell = this;
 					var position = $(cell).attr('id');
@@ -186,8 +201,8 @@ angular.module('personalSite')
 									$("#status-container").text(msg);
 								} else {
 									flashWin(complete.positions)
-									showCompleteMsg(complete.result,game.symbol);
-								}
+									var msg = game.symbol + " won!";
+									$("#status-container").text(msg);								}
 							} else {
 								var msg = game.opSymbol + "'s turn";
 								$("#status-container").text(msg);
