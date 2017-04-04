@@ -76,6 +76,14 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRoute
 			css: 'styles/ticTacToe.css'
 		}
 	})
+	.state('projects.simon', {
+		url: "/projects/simon",
+		controller : 'SimonCtrl',
+		templateUrl : 'views/simon.html',
+		data: {
+			css: 'styles/simon.css'
+		}
+	})
 
 
 }).run(function($rootScope, $window, $sessionStorage) {

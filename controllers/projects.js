@@ -21,13 +21,13 @@ angular.module('personalSite')
 					img: "images/quote.png",
 					sref: ".quote"
 				},
-
+/*
 				{
 					name: "Local Weather",
 					img: "images/weather.png",
 					sref: ".weather"
 				},
-
+*/
 				{
 					name: "Wikipedia Viewer",
 					img: "images/wikipedia.png",
@@ -57,6 +57,11 @@ angular.module('personalSite')
 					name: "Tic-Tac-Toe",
 					img: "images/ticTacToe.png",
 					sref: ".ticTacToe"
+				},
+				{
+					name: "Simon",
+					img: "images/simon.png",
+					sref: ".simon"
 				}
 
 			]
@@ -65,12 +70,12 @@ angular.module('personalSite')
 			name:"ANGULARJS",
 			color: "#de1914",
 			img: "images/angularLogo.png",
-			projects: [
+			projects: [/*
 				{
 					name: "Random Quote Generator",
 					img: "images/quote.png",
 					sref: ".quote"
-				}
+				}*/
 			]
 		}
 
