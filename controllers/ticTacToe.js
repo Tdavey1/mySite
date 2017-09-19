@@ -1,6 +1,6 @@
 angular.module('personalSite')
 .controller('TicTacToeCtrl', function($scope) {
-  
+
 	$(document).ready(function() {
 
 	// gets circle progressbar objects 

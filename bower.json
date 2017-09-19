@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "homepage": "https://github.com/Tdavey1/resume",
+  "homepage": "https://github.com/Tdavey1/mySite",
   "authors": [
     "Taira Davey <td284@cornell.edu>"
   ],
@@ -22,5 +22,8 @@
     "angular-ui-router-styles": "^1.1.0",
     "bootstrap": "v4.0.0-alpha.6",
     "progressbar.js": "^1.0.1"
+  },
+  "resolutions": {
+    "angular-ui-router": "^0.3.1"
   }
 }

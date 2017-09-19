@@ -1,4 +1,5 @@
 angular.module('personalSite')
-.controller('AboutCtrl', function($scope) {
+.controller('AboutCtrl', function($scope, $uibModal) {
+
 
 });

@@ -3,24 +3,32 @@
 
 	<head>
 		<title>Taira's website</title>
-		<base href="/">
-		<!--<base href="/mySite/">-->
+		<!--<base href="/">-->
+		<base href="/mySite/">
 
 		
 		<!-- bower:css -->
 		<!-- endbower -->
 		
-		<link href="bower_components/bootstrap/dist/css/journal.min.css" rel="stylesheet">
+		<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="styles/general.css" rel="stylesheet">
+		<link href="styles/bootstrap4Modal.css" rel="stylesheet">
 		<link href="styles/resume.css" rel="stylesheet">
 		<link href="styles/about.css" rel="stylesheet">
 		<link href="styles/projects.css" rel="stylesheet">
+		<link href="styles/simon.css" rel="stylesheet">
+		<link href="styles/calculator.css" rel="stylesheet">
+
+		<link href="styles/pomodoro.css" rel="stylesheet">
+		<link href="styles/ticTacToe.css" rel="stylesheet">
+		<!--
+	-->
 
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
 
 	<body>
-
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -48,6 +56,7 @@
 	<!-- bower:js -->
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="bower_components/ngstorage/ngStorage.js"></script>
 	<script src="bower_components/angular-ui-router-styles/ui-router-styles.js"></script>
@@ -55,7 +64,6 @@
 	<script src="bower_components/tether/dist/js/tether.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script src="bower_components/progressbar.js/dist/progressbar.js"></script>
-
 	<!-- endbower -->
 <!--
 	<script src="bower_components/bootstrap/js/carousel.js"></script>
@@ -76,6 +84,9 @@
 	
 	<script src="controllers/ticTacToe.js"></script>
 	<script src="controllers/simon.js"></script>
+	<script src="controllers/about.js"></script>
+
+	<script src="controllers/projectModal.js"></script>
 
 
 

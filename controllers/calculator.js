@@ -1,114 +1,117 @@
 angular.module('personalSite')
 .controller('CalculatorCtrl', function($scope) {
 
-var curVal = "";
-var eq = "";
-$('.num').on('click',function() {
+	var tot = null; // holds the total
+	var eq = ""; // holds the full equation
 
-  if (curVal.length>0 && ((!Number(curVal)) && curVal.indexOf('.')==-1)) {
-    eq+=curVal;
-    $('#history').html(eq);
-    curVal="";
-  }
-  if (!Number(eq[eq.length-1]) && this.value=='.' && curVal.length<1) {
-    curVal += 0 + this.value;
-  } else if (!Number(eq[eq.length-1]) && (this.value!='.' || curVal.indexOf('.')==-1) ) {
-    curVal +=this.value;
-  }
-  if (curVal.length>15) {
-    $('#total').html("It's too much... :(")
-    curVal = "";
-  } else {
-    $('#total').html(curVal)
-  }
-})
+	var values = {1:"num", 2: "num", 3: "num", 4:"num", 5:"num", 6: "num", 7:"num",8:"num", 9:"num", ".":"num", "+":"op", "-":"op", "/":"op", "+":"op"};
 
-$('.op').on('click',function() {
-  if (Number(eq[eq.length-1])) {
-    curVal=this.value;
-    $('#total').html(this.value);
+	/* 
+	appends number to end of equation string
+	gets rid of leading zeros
+	*/
+	$('.num').on('click', function() {
+		if (tot == eq) {
+			resetAll();
+		}
+		var length = eq.length;
+		if (length > 2) {
+			if (values[eq[length-2]] == "op" && eq[length-1] == 0) {
+				eq = eq.slice(0,eq.length-1);
+			}
+		} else if (length == 1) {
+			if (eq[0] == 0) {
+				eq = ""
+			}
+		}
+		eq+= this.value;
+		$("#eq").html(eq);
+	})
 
-  }else if (Number(curVal)) {
-    eq += curVal;
-    $('#total').html(this.value);
-    $('#history').html(eq);
-    curVal = this.value;
-  }
-})
+	$(".op").on("click", function() {
+		if (eq.length != 0 && values[eq[eq.length-1]] != "op") {
+			eq+= this.value;
+			$("#eq").html(eq);
+		}
+	})
 
-$('#back').on('click', function() {
-  if (curVal.length>0) {
-    curVal = curVal.slice(0,curVal.length-1);
-    $('#total').html(curVal)
-  }
-})
+	/* 
+	removes last value of the equation
+	displays the changed eq
+	adds a 0 if the eq is now an empty string
+	*/
+	function del() {
+		if (eq.length>0) {
+			eq = eq.slice(0,eq.length-1);
+			if (eq.length == 0) {
+				$("#eq").html(0);
+			} else {
+				$('#eq').html(eq);
+			}
+		}  
+	}
 
-$('#ac').on('click',function() {
-  curVal = "";
-  eq = "";
-  $('#total').html(0);
-  $('#history').html(0);
-})
+	$('#back').on('click', del)
 
-$('#ce').on('click',function() {
-  if(curVal.length>0) {
-    curVal="";
-    $('#total').html(0);
-  } else if (eq!=="") {
-    if (!Number(eq[eq.length-1])) {
+	/*
+	changes the equation and result back to zero
+	*/
+	function resetAll() {
+		tot = 0;
+		eq = "";
+		$('#tot').html(0);
+		$('#eq').html(0);
+		noseWiggle()
+	}
 
-      eq = eq.slice(0,eq.length-1)
-      $('#history').html(eq)
-    } else if (Number(eq[eq.length-1])) {
-      var lastOp = eq.split("").reverse().join("").match(/[\D]/)
-      if (!lastOp) {
-        eq = "";
-        $('#history').html(0);
-      } else {
-        var index = eq.lastIndexOf(lastOp[0]);
-        eq = eq.slice(0,index+1);
-        $('#history').html(eq) 
-      }
-    }
-  } 
-})
+	$('#ac').on('click', resetAll)
 
-$('#equal').on('click', function() {
+	/*
+	removes current equation and changes back to previous total
+	*/
+	$('#ce').on('click', function() {
+		if (tot>0) {
+			eq = tot.toString();
+			$("#eq").html(eq);
 
-  if (Number(curVal)) {
-    eq+=curVal;
-    $('#history').html(eq);
-    $('#total').html(eval(eq).toFixed(2));
-    curVal = eval(eq).toFixed(2);
-    eq="";
-  } else if (curVal.length==0 && Number(eq[eq.length-1])) {
-    $('#total').html(eval(eq))
-    curVal=eval(eq);
-    eq=""
-  }
-})
+		} else {
+			eq = "";
+			$("#eq").html(0);
 
-var wink = function() {
-  $('#left-eye').animate({height:".2em"}, 100, function() {
-    $(this).animate({height:"1.5em"}, 100)
-  })
-}
+		}
+		noseWiggle();
+	})
 
-var noseWiggle = function() {
-  $("#nose").animate({left: "-=.05em"}, 100, function() {
-    $(this).animate({left: "+=.1em"}, 200, function() {
-      $(this).animate({left: "-=.05em"}, 100)
-    })
-  })
-}
+	$('#equal').on('click', function() {
+		if (values[eq[eq.length -1]] == "op" ) {  // show err if the last value is an op
+			$(".warning").html("theres an op at the end :/");
+		} else { // calculates total
+			tot = eval(eq);
+			if (tot % 1 != 0) {
+				tot = tot.toFixed(2);
+			}
+			eq = tot.toString();
+			$("#tot").html(tot);
+			$("#eq").html(eq);
+			wink();
+		}
+	})
 
-$('.equal').on('click', function() {
-  wink();
-})
+	function wink() {
+		$('#left-eye').animate({height:".2em"}, 100, function() {
+			$(this).animate({height:"1.5em"}, 100)
+		})
+	}
 
-$('#ac, #ce').on('click', function() {
-  noseWiggle();
-})
+	function noseWiggle() {
+		$("#nose").animate({left: "-=.075em"}, 120, function() {
+			$(this).animate({left: "+=.15em"}, 240, function() {
+				$(this).animate({left: "-=.075em"}, 120)
+			})
+		})
+	}
+
+
 
 
 });

@@ -1,5 +1,8 @@
-angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRouterStyles'])//include plugins in an array on the first line
+angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRouterStyles'])
+
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+
+
 	$urlRouterProvider.otherwise("/about");
 //	$locationProvider.html5Mode(true);
 
@@ -86,6 +89,6 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRoute
 	})
 
 
-}).run(function($rootScope, $window, $sessionStorage) {
+}).run(function($rootScope, $window/*, $sessionStorage*/) {
 
 })

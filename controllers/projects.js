@@ -1,13 +1,27 @@
 angular.module('personalSite')
-.controller('ProjectsCtrl', function($scope) {
+.controller('ProjectsCtrl', function($scope, $uibModal) {
 
-	$scope.viewProject = false;
+	$scope.openModal = function(project) {
+		var modalInstance = $uibModal.open({
+			templateUrl: 'views/projectModal.html',
+			controller: 'ModalCtrl',
+			resolve: {
+				project: function() {
+					return project;
+				}
+			}
+		})
 
-	$scope.viewAll = true;
+		modalInstance.opened.then(function () {
+			console.log("opened")
+		});
+		modalInstance.result.then(function () {
+			console.log("closed normal")
+		});
+		modalInstance.result.catch(function(){
+			console.log("closed bad")
+		});
 
-	$scope.changeDisplay = function() {
-		$scope.viewProject = !$scope.viewProject;
-		$scope.viewAll = !$scope.viewAll;
 	}
 
 	$scope.libraries = [
@@ -16,18 +30,21 @@ angular.module('personalSite')
 			color: "#0769ad",
 			img: "images/jQueryLogo.png",
 			projects: [
+/*
 				{
 					name: "Random Quote Generator",
 					img: "images/quote.png",
-					sref: ".quote"
+					html: ".quote",
+					css: "css",
+					ctrl: "ctrl"
 				},
-/*
+
 				{
 					name: "Local Weather",
 					img: "images/weather.png",
 					sref: ".weather"
 				},
-*/
+
 				{
 					name: "Wikipedia Viewer",
 					img: "images/wikipedia.png",
@@ -40,28 +57,36 @@ angular.module('personalSite')
 					sref: ".twitch"
 				},
 
-
+*/
 				{
 					name:"Calculator",
 					img: "images/calculator.png",
-					sref: ".calculator"
+					html: "views/calculator.html",
+					css: "styles/calculator.css",
+					ctrl: "CalculatorCtrl"
 				},
 
 				{
 					name: "Pomodoro Clock",
 					img: "images/pomodoro.png",
-					sref: ".pomodoro"
+					html: "views/pomodoro.html",
+					css: "styles/pomodoro.css",
+					ctrl: "PomodoroCtrl"
 				},
 
 				{
 					name: "Tic-Tac-Toe",
 					img: "images/ticTacToe.png",
-					sref: ".ticTacToe"
+					html: "views/ticTacToe.html",
+					css: "styles/ticTacToe.css",
+					ctrl: "TicTacToeCtrl"
 				},
 				{
 					name: "Simon",
 					img: "images/simon.png",
-					sref: ".simon"
+					html: "views/simon.html",
+					css: "styles/simon.css",
+					ctrl: "SimonCtrl"
 				}
 
 			]

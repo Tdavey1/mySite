@@ -1,0 +1,28 @@
+.fade.in {
+    opacity: 1;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+@media (min-width: 840px) {
+	.modal-dialog {
+		max-width: 800px;
+		margin: 30px auto;
+	}
+}
+
+@media (min-width: 200px) and (max-width : 840px)  {
+	.modal-dialog {
+		max-width: 600px;
+		margin: 30px auto;
+	}
+}

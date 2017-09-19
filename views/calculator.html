@@ -1,90 +1,73 @@
-<div class="container-fluid text-center">  
-  <div class="ear-container row justify-content-between">
-    <div class="ear ear-left"></div>
-    <div class="ear-connector ear-connector-left"></div>
-    <div class="ear-connector ear-connector-right"></div>
-    <div class="ear ear-right"></div>  
-  </div>
 
-  <div class="calc-container">
-    
-    <div class="container display text-right">
-      <div class="equation-container">
-        <h2 id="total">0</h2>
-        <h5 id="history">0</h5>
-      </div>
-    </div>
-      
-    <div class="container face text-right">
-      <div class="row justify-content-around">
-        <div id="left-eye" class="eye-nose"></div>
-        <div class="eye-nose"></div>
-      </div>
-      <div class="face-bottom">
-        <div id="nose" class="eye-nose"></div>
-        <div class="mouth-container row">
-          <div class="mouth"></div>
-          <div class="mouth"></div>
-          <div class="mouth-cover-top"></div>
-          <div class="mouth-cover-left"></div>
-          <div class="mouth-cover-right"></div>
-        </div>
-      </div>
-      <div id="headband"></div>
-    </div>
-    
-    <div class="container values">
-      <div class='row col-12 val-row'>
-        <button id="ac" class="value" value="ac">AC</button>
-        <button id="ce" class="value" value="ce">CE</button>
-        <button id="back" class="value" value="back">&larr;</button>
-        <button class="value op" value="*">x</button>
-      </div>
-      <div class='row col-12 val-row mt-2'>
-        <button class="value num" value="7">7</button>
-        <button class="value num" value="8">8</button>
-        <button class="value num" value="9">9</button>
-        <button class="value op" value="/">&divide;</button>
-      </div>
-      <div class='row col-12 val-row mt-2'>
-        <button class="value num" value="4">4</button>
-        <button class="value num" value="5">5</button>
-        <button class="value num" value="6">6</button>
-        <button class="value op" value="+">+</button>
-      </div>
-      <div class='row col-12 val-row mt-2'>
-        <button class="value num" value="1">1</button>
-        <button class="value num" value="2">2</button>
-        <button class="value num" value="3">3</button>
-        <button class="value op" value="-">-</button>
-      </div>
-      <div class='row col-12 val-row mt-2'>
-        <button class="value num" value="0">0</button>
-        <button class="value num" value=".">.</button>
-        <button id="equal" class="value equal" value="=">=</button>
-      </div>
+<div ng-controller="CalculatorCtrl" class="container-fluid text-center">  
+	<div class="ear-container row justify-content-between">
+		<div class="ear ear-left"></div>
+		<div class="ear-connector ear-connector-left"></div>
+		<div class="ear-connector ear-connector-right"></div>
+		<div class="ear ear-right"></div>  
+	</div>
+
+	<div class="calc-container">
+		
+		<div class="container display text-right">
+			<div class="equation-container">
+				<h2 id="tot">0</h2>
+				<h5 id="eq">0</h5>
+			</div>
+		</div>
+			
+		<div class="container face text-right">
+			<div class="row justify-content-around">
+				<div id="left-eye" class="eye-nose"></div>
+				<div class="eye-nose"></div>
+			</div>
+			<div class="face-bottom">
+				<div id="nose" class="eye-nose"></div>
+				<div class="mouth-container row">
+					<div class="mouth"></div>
+					<div class="mouth"></div>
+					<div class="mouth-cover-top"></div>
+					<div class="mouth-cover-left"></div>
+					<div class="mouth-cover-right"></div>
+				</div>
+			</div>
+			<div id="headband"></div>
+		</div>
+		
+		<div class="container values">
+			<div class='row col-12 val-row'>
+				<button id="ac" class="value" value="ac">AC</button>
+				<button id="ce" class="value" value="ce">CE</button>
+				<button id="back" class="value" value="back">&larr;</button>
+				<button class="value op" value="*">x</button>
+			</div>
+			<div class='row col-12 val-row mt-2'>
+				<button class="value num" value="7">7</button>
+				<button class="value num" value="8">8</button>
+				<button class="value num" value="9">9</button>
+				<button class="value op" value="/">&divide;</button>
+			</div>
+			<div class='row col-12 val-row mt-2'>
+				<button class="value num" value="4">4</button>
+				<button class="value num" value="5">5</button>
+				<button class="value num" value="6">6</button>
+				<button class="value op" value="+">+</button>
+			</div>
+			<div class='row col-12 val-row mt-2'>
+				<button class="value num" value="1">1</button>
+				<button class="value num" value="2">2</button>
+				<button class="value num" value="3">3</button>
+				<button class="value op" value="-">-</button>
+			</div>
+			<div class='row col-12 val-row mt-2'>
+				<button class="value num" value="0">0</button>
+				<button class="value num" value=".">.</button>
+				<button id="equal" class="value equal" value="=">=</button>
+			</div>
 
 
-      
-    </div>
-  </div>
+			
+		</div>
+	</div>
 
 </div>
-
-<!--
-
-      <div class='row col-12 val-row mt-2'>
-        <div class="col-9">
-          <div class="row">
-            <button class="value num" value="1">1</button>
-            <button class="value num" value="2">2</button>
-            <button class="value num" value="3">3</button>
-          </div>
-          <div class="row mt-2">
-            <button class="value zero num" value="0">0</button>
-            <button class="value num" value=".">.</button>
-          </div>
-        </div>
-          <button id="equal" class="value equal">=</button>
-      </div>
--->
