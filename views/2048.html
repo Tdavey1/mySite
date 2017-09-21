@@ -1,0 +1,18 @@
+<div ng-controller="2048Ctrl" tabIndex="0" ng-keydown="keyPress($event)">
+	<div id="stage-2048">
+		<div id="header-2048">
+			<div id="name-2048">2048</div>
+			<div id="info-2048">
+				<div id="highscore-2048">
+					<p>Highscore<br><strong>{{highest}}</strong></p>
+				</div>
+				<div id="restart-2048" class="btn btn-info" ng-click="restart()">restart</div>
+			</div>
+		</div>
+		<div id="board-2048">
+			<div ng-repeat="cell in cells track by $index" ng-style="{'background-color':cell.color}" class="cell-2048">
+				<p class="numbers-2048" ng-style="{'font-size':cell.size}">{{cell.val}}</p>
+			</div>
+		</div>
+	</div>
+</div>

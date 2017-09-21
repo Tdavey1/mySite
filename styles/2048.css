@@ -1,0 +1,64 @@
+#stage-2048 {
+}
+
+#board-2048 {
+	background-color: #8e847b;
+	height:20em;
+	width:20em;
+	margin: auto;
+	border-radius:10px;
+	padding:.4em
+}
+
+.cell-2048 {
+	background-color: #fadabf;
+	height:4em;
+	width:4em;
+	display:inline-block;
+	border-radius:2px;
+	vertical-align:bottom;
+	margin: .4em .4em .4em .4em;
+	text-align:center;
+	vertical-align: middle;
+}
+
+.numbers-2048 {
+	font-weight: bold;
+	color:grey;
+	vertical-align: middle;
+	line-height:50px;
+	vertical-align: center;
+	margin-top: 7.5px;
+}
+
+#header-2048 {
+	width: 20em;
+	height: 6em;
+	margin:auto;
+	padding: 0 1em 0 1em;
+}
+
+#name-2048 {
+	display: inline-block;
+	font-size: 60px;
+	font-weight: bold;
+}
+
+#info-2048 {
+	display:inline-block;
+	text-align: center;
+	height: 6em;
+	width:9em;
+}
+
+#restart-2048 {
+	width:7em;
+}
+
+#highscore-2048 {
+	background-color:orange;
+	border-radius: 5px;
+	width:7em;
+	height: 3em;
+	margin:0 auto 5px auto;
+}

@@ -95,12 +95,21 @@ angular.module('personalSite')
 			name:"ANGULARJS",
 			color: "#de1914",
 			img: "images/angularLogo.png",
-			projects: [/*
+			projects: [
 				{
-					name: "Random Quote Generator",
-					img: "images/quote.png",
-					sref: ".quote"
-				}*/
+					name: "2048",
+					img: "images/2048.png",
+					html: "views/2048.html",
+					css: "styles/2048.css",
+					ctrl: "2048Ctrl"
+				},
+				{
+					name: "Sticky notes",
+					img: "images/stickyNotes.png",
+					html: "views/stickyNotes.html",
+					css: "styles/stickyNotes.css",
+					ctrl: "StickyNotesCtrl"
+				}
 			]
 		}
 
