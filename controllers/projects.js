@@ -109,6 +109,13 @@ angular.module('personalSite')
 					html: "views/stickyNotes.html",
 					css: "styles/stickyNotes.css",
 					ctrl: "StickyNotesCtrl"
+				},
+				{
+					name: "Grocery list",
+					img: "images/groceryList.png",
+					html: "views/groceryList.html",
+					css: "styles/groceryList.css",
+					ctrl: "GroceryListCtrl"
 				}
 			]
 		}

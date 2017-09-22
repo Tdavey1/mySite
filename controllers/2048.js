@@ -3,7 +3,46 @@ angular.module('personalSite')
 	
 	$scope.highest = 2;
 
+	var recentHigh = 2;
+
+	$scope.start = {'msg':'start', 'color':'#34ff34'};
+
+	$scope.gameOver = true;
+
+	var sizeInfo = {
+		2: {color:"#eee4d9", size:'2.7em'},
+		4: {color:"#f6e8cb", size:'2.7em'},
+		8: {color:"#feb17b", size:'2.7em'},
+		16: {color:"#f49563", size:'2.7em'},
+		32: {color:"#f67b5e", size:'2.7em'},
+		64: {color:"#f75e3e", size:'2.7em'},
+		128: {color:"#edcf6f", size:'2.1em'},
+		256: {color:"#edcc61", size:'2.1em'},
+		512: {color:"#ecc850", size:'2.1em'},
+		1024: {color:"#edc63d", size:'1.5em'},
+		2048: {color:"#edc22e", size:'1.5em'}
+	}
+	$scope.cells = [];
+
+	var emptyPos = {};
+
+	$scope.gameStatus = {'msg':'You Won!', 'started': false}
+
+	for (var i = 0; i<16;i++) {
+		$scope.cells[i] = {val:null, color:"#B1AAA4", size:null};
+		emptyPos[i] = true;
+	}
+
+	$scope.start = function() {
+		$scope.gameStatus.started = true;
+		addTile();
+		addTile();
+	}
+
 	$scope.restart = function() {
+		$scope.gameStatus.lost = false;
+		$scope.gameStatus.won = false;
+		recentHigh = 2;
 		for (var i = 0; i<16;i++) {
 			$scope.cells[i] = {val:null, color:"#B1AAA4", size:null};
 			emptyPos[i] = true;
@@ -11,8 +50,6 @@ angular.module('personalSite')
 		addTile();
 		addTile();
 	}
-
-	var emptyPos = {}
 	
 	 var adjacent = {
 		0: [],
@@ -240,13 +277,28 @@ angular.module('personalSite')
 		$scope.cells[pos].size = null;
 		emptyPos[adj] = false;
 		emptyPos[pos] = true;
-		if (val > $scope.highest) {
-			$scope.highest = val;
+
+		console.log(recentHigh)
+		if (val > recentHigh) {
+
+			recentHigh = val;
+			
+			if (recentHigh > $scope.highest) {
+				$scope.highest = val
+			}
+			
+			console.log(val)
+			if (recentHigh == 2048) {
+				$scope.gameStatus.won = true;
+				$scope.gameStatus.msg = "You Won!"
+			}
 		}
 	}
 	
 	$scope.keyPress = function(e) {
-			var pressed = e.which;
+		e.preventDefault();
+		var pressed = e.which;
+		if ($scope.gameStatus.started && !($scope.gameStatus.won && $scope.gameStatus.lost)) {		
 			if (pressed == 37) {
 				var moved = left();
 			} else if (pressed == 38) {
@@ -256,30 +308,15 @@ angular.module('personalSite')
 			} else if (pressed == 40) {
 				var moved = down();
 			}
-		
-		
 			if (moved) {
 				addTile();
 			if (checkDone()) {
-					alert("finished")
+					$scope.gameStatus.lost = true;
+					$scope.gameStatus.msg = "You Lost :/"
 				}
 			}
+		}
 	}
-	var sizeInfo = {
-		2: {color:"#eee4d9", size:'2.7em'},
-		4: {color:"#f6e8cb", size:'2.7em'},
-		8: {color:"#feb17b", size:'2.7em'},
-		16: {color:"#f49563", size:'2.7em'},
-		32: {color:"#f67b5e", size:'2.7em'},
-		64: {color:"#f75e3e", size:'2.7em'},
-		128: {color:"#edcf6f", size:'2.1em'},
-		256: {color:"#edcc61", size:'2.1em'},
-		512: {color:"#ecc850", size:'2.1em'},
-		1024: {color:"#edc63d", size:'1.5em'},
-		2048: {color:"#edc22e", size:'1.5em'}
-	}
-	$scope.cells = [];
 
 
-	$scope.restart();
 })

@@ -1,10 +1,9 @@
 <div ng-controller="StickyNotesCtrl">
 
-
 	<div id="stage-notes" ng-mousemove="mousemove($event)" ng-mouseup="release()">
 		<div class="btn btn-primary" ng-click="addNote()">Add note</div>
 		<div class="btn btn-primary" ng-click="clearAll()">Clear all</div>
-		<div ng-repeat="note in notes track by $index" ng-mousedown="mousedown($event, this)" ng-mouseenter="mouseenter(this)" ng-mouseleave="mouseleave(this)" ng-style="{'left':note.left + 'px', 'top':note.top+'px', 'transform':'rotate(' + note.rotate + 'deg)', 'z-index':note.z, 'background-color': note.color}" class="sticky">
+		<div ng-repeat="note in notes track by $index" ng-mousedown="mousedown($event, this)" ng-mouseenter="mouseenter(this)" ng-mouseleave="mouseleave(this)" ng-style="{'left':note.left + 'px', 'top':note.top+'px', 'transform':'rotate(' + note.rotate + 'deg)', 'z-index':note.z, 'background-color': note.color}" class="sticky ccccff">
 			
 			<div ng-click="deleteNote(this)" class="sticky-close"></div>
 			<input ng-model="note.title" class="sticky-title" placeholder="title" maxlength="10">

@@ -10,6 +10,10 @@
 	padding:.4em
 }
 
+.start-2048 {
+	width:7em;
+}
+
 .cell-2048 {
 	background-color: #fadabf;
 	height:4em;
@@ -53,12 +57,42 @@
 
 #restart-2048 {
 	width:7em;
+	color: white;
 }
 
 #highscore-2048 {
-	background-color:orange;
+	background-color:#ccccff;
 	border-radius: 5px;
 	width:7em;
 	height: 3em;
 	margin:0 auto 5px auto;
+}
+
+#game-status-2048 {
+	height:70px;
+	width:320px;
+	position: relative;
+	margin:auto;
+	bottom:200px;
+	border-radius: 5px; 
+	background-color: #349aff;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	padding:10px;
+}
+
+#msg-2048 {
+	font-size: 20px;
+	font-weight: bold;
+	height:40px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	margin:auto;
+}
+
+.end-btn {
+	font-size: 12px;
+	margin:auto;
 }

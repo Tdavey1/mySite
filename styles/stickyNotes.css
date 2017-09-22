@@ -27,15 +27,13 @@
 
 .sticky-close {
 	position: absolute;
-	left: 188px;
-	top: 4px;
+	left: 191px;
+	top: 3px;
 	width: 17px;
 	height: 17px;
 	opacity: .4;
 	cursor:pointer;
 	transition: 0.5s ease-in-out;
-	background-color:#d7d7d7;
-	border-radius:50%;
 
 }
 
@@ -45,20 +43,16 @@
 	left:7px;
 	top:2px;
 	height: 13px;
-	width: 3px;
-	background-color: white;
+	width: 2px;
+	background-color: black;
 	opacity:1;
 }
+
 .sticky-close:before {
 	transform: rotate(45deg);
 }
 .sticky-close:after {
 	transform: rotate(-45deg);
-}
-
-.sticky-close:hover {
-	opacity:1;
-	transform: rotate(270deg);
 }
 
 .sticky-title {

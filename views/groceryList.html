@@ -1,0 +1,32 @@
+<div ng-controller="GroceryListCtrl">
+	<div id="grocery-stage">
+
+		<form id="grocery-form" class="form-inline" ng-submit="addItem(temp.name, temp.amount)">
+			<legend id="grocery-title">My Grocery List</legend>
+			<input class="grocery-form-item form-control" ng-model="temp.name" placeholder="Enter item here" required>
+			<input class="grocery-form-item form-control" ng-model="temp.amount" placeholder="Enter amount here" value="1" type="number">
+			<input ng-disabled="!temp.name" class="form-control btn btn-primary" type="submit" value="Submit">
+		</form>
+		<ul id="grocery-list">
+			<li ng-show="temp.name || temp.amount">
+				<div class="grocery-item" id="grocery-temp">
+					<div class="grocery-placeholder"></div>
+
+					<div id="grocery-name-temp">{{temp.name}}</div>
+					<div id="grocery-amount-temp">{{temp.amount}}</div>
+					<div class="grocery-placeholder"></div>
+
+				</div>
+			</li>
+			<li ng-repeat="item in groceryList">
+				<div class="grocery-item">
+					<input ng-click="check(this)" type="checkbox">
+					<input type="text" class="form-control grocery-name" ng-class="{'grocery-complete':item.complete}" ng-model="item.name">
+
+					<input type="number" class="form-control grocery-amount" ng-class="{'grocery-complete':item.complete}" ng-model="item.amount">
+					<i class="fa fa-trash grocery-remove" ng-click="removeItem(this)"></i>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

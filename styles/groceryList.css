@@ -1,0 +1,89 @@
+#grocery-stage {
+	background-color: #f1f1f1;
+	min-height: 300px;
+	max-width: 800px;
+	margin: auto;
+	padding: 10px 15px 1px 15px;
+}
+
+#grocery-title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#grocery-form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+	background-color: white;
+	border-radius: 10px;
+	padding-bottom: 10px;
+}
+
+.grocery-form-item {
+	margin-right: 10px;
+}
+
+#grocery-list {
+	list-style: none;
+	padding: 0;
+}
+
+.grocery-item {
+	height:40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: white;
+	border-radius: 5px;
+	margin-top: 5px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.grocery-name {
+	display: inline-block;
+	width:40%;
+	background-color: transparent;
+	font-weight: bold;
+	border: none;
+}
+
+#grocery-name-temp {
+	display: inline-block;
+	width:40%;
+	padding: .5rem .75rem;
+}
+
+#grocery-amount-temp {
+	display: inline-block;
+	width:20%;
+	padding: .5rem .75rem;
+}
+
+.grocery-amount {
+	display: inline-block;
+	width:20%;
+	background-color: transparent;
+	font-weight: bold;
+	border: none;
+}
+
+#grocery-temp {
+	background-color: #dbdbdb;
+}
+
+.grocery-complete {
+	text-decoration: line-through;
+	color: #999999;
+}
+
+.grocery-placeholder {
+	width: 12px;
+}
+
+.grocery-remove:hover {
+	cursor: pointer;
+	transform: scale(1.3);
+}

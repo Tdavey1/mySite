@@ -3,6 +3,7 @@
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+[tabIndex] {
     outline: none;
 }

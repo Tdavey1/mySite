@@ -14,7 +14,8 @@ angular.module("personalSite")
 		var leftPos = Math.floor(Math.random() * (600-210));
 		var topPos = Math.floor(Math.random() * (500-210));
 		var rotate = Math.random() * 10 - 5;
-		var color = colors[Math.floor(Math.random() * colors.length) ]
+		var color = colors[Math.floor(Math.random() * colors.length) ];
+
 		var note = {};
 		note.left = leftPos;
 		note.top = topPos;
@@ -32,6 +33,7 @@ angular.module("personalSite")
 	
 	$scope.clearAll = function() {
 		$scope.notes = [];
+		front = 0;
 	}
 
 	$scope.mousemove = function(e) {
