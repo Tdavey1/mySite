@@ -23,7 +23,7 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRoute
 		controller : 'ProjectsCtrl',
 		templateUrl : 'views/projects.html'
 	})
-	.state('projects.quote', {
+/*	.state('projects.quote', {
 		url: "/projects/quote",
 		controller : 'QuoteCtrl',
 		templateUrl : 'views/quote.html',
@@ -85,7 +85,7 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRoute
 		templateUrl : 'views/simon.html',
 		data: {
 			css: 'styles/simon.css'
-		}
+		}*/
 	})
 
 
