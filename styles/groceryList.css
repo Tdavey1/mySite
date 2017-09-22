@@ -25,6 +25,19 @@
 	margin-right: 10px;
 }
 
+#grocery-warning {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	height: 40px;
+	padding: 0 15px 0 15px;
+}
+
+#grocery-warning-remove {
+	cursor: pointer;
+}
+
 #grocery-list {
 	list-style: none;
 	padding: 0;

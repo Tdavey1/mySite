@@ -2,20 +2,36 @@ angular.module('personalSite')
 
 .controller("GroceryListCtrl", function($scope) {
 
-	$scope.groceryList = []
+	$scope.groceryList = [];
+
+	$scope.duplicate = false;
 	
 	$scope.temp = {"name":null, "amount":null};
 
+	var items = {};
+
 	$scope.addItem =function(name, amount) {
 		console.log(name, amount)
-		var item = {}
-		var amount = (amount) ? amount : 1;
-		item.name = name;
-		item.amount = amount;
-		item.complete = false;
-		$scope.groceryList.unshift(item)
-		$scope.temp.name = null;
-		$scope.temp.amount = null;
+
+		var itemName = name.toLowerCase();
+
+		if (!(itemName in items)) {
+			var item = {}
+			var amount = (amount) ? amount : 1;
+			item.name = name;
+			item.amount = amount;
+			item.complete = false;
+			$scope.groceryList.unshift(item)
+			$scope.temp.name = null;
+			$scope.temp.amount = null;
+			items[itemName] = true;
+		} else {
+			$scope.duplicate = true;
+		}
+	}
+
+	$scope.removeWarning = function() {
+		$scope.duplicate = false;
 	}
 
 	$scope.check = function(elem) {
