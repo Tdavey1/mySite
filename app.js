@@ -85,8 +85,9 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRoute
 		templateUrl : 'views/simon.html',
 		data: {
 			css: 'styles/simon.css'
-		}*/
+		}
 	})
+*/
 
 
 }).run(function($rootScope, $window/*, $sessionStorage*/) {
