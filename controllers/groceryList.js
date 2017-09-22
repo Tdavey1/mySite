@@ -3,6 +3,7 @@ angular.module('personalSite')
 .controller("GroceryListCtrl", function($scope) {
 
 	$scope.groceryList = [];
+	$scope.completed = [];
 
 	$scope.duplicate = false;
 	
@@ -21,7 +22,7 @@ angular.module('personalSite')
 			item.name = name;
 			item.amount = amount;
 			item.complete = false;
-			$scope.groceryList.unshift(item)
+			$scope.groceryList.push(item);
 			$scope.temp.name = null;
 			$scope.temp.amount = null;
 			items[itemName] = true;
@@ -34,18 +35,18 @@ angular.module('personalSite')
 		$scope.duplicate = false;
 	}
 
-	$scope.check = function(elem) {
+	$scope.check = function(elem, location) {
+		console.log(elem)
 		var index = elem.$index;
-		$scope.groceryList[index].complete = !$scope.groceryList[index].complete;
-		var tmp = $scope.groceryList[index];
-		if ($scope.groceryList[index].complete) {
-			$scope.groceryList.splice(index,1);
-			$scope.groceryList.push(tmp);
-		} else {
-			$scope.groceryList.splice(index,1);
-			$scope.groceryList.unshift(tmp);
-		}
+		if (location == 'grocery') {
+			var tmp = $scope.groceryList.splice(index,1)[0];
+			console.log(tmp)
+			$scope.completed.push(tmp);
 
+		} else {
+			var tmp = $scope.completed.splice(index,1)[0];
+			$scope.groceryList.push(tmp);
+		}
 	}
 
 	$scope.removeItem = function(elem) {

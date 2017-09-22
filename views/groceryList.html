@@ -8,33 +8,44 @@
 			<input ng-disabled="!temp.name" class="form-control btn btn-primary" type="submit" value="Submit">
 		</form>
 
-		<div ng-show="duplicate" id="grocery-warning" class="alrt alert-danger">
+		<div ng-show="duplicate" ng-click="removeWarning()" id="grocery-warning" class="alrt alert-danger">
 			<div class="grocery-placeholder"></div>
 			Whoops, you already added that item!
-			<i id="grocery-warning-remove" class="fa fa-trash" ng-click="removeWarning()"></i>
 
+			<div id="grocery-warning-close"></div>
 		</div>
 
 		<ul id="grocery-list">
-			<li ng-show="temp.name || temp.amount">
-				<div class="grocery-item" id="grocery-temp">
-					<div class="grocery-placeholder"></div>
 
-					<div id="grocery-name-temp">{{temp.name}}</div>
-					<div id="grocery-amount-temp">{{temp.amount}}</div>
-					<div class="grocery-placeholder"></div>
-
-				</div>
-			</li>
 			<li ng-repeat="item in groceryList">
 				<div class="grocery-item">
-					<input ng-click="check(this)" type="checkbox">
-					<input type="text" class="form-control grocery-name" ng-class="{'grocery-complete':item.complete}" ng-model="item.name">
+					<input ng-click="check(this,'grocery')" type="checkbox">
+					<div type="text" class="form-control grocery-name">{{item.name}}</div>
 
-					<input type="number" class="form-control grocery-amount" ng-class="{'grocery-complete':item.complete}" ng-model="item.amount">
+					<input type="number" class="form-control grocery-amount" ng-model="item.amount">
 					<i class="fa fa-trash grocery-remove" ng-click="removeItem(this)"></i>
 				</div>
 			</li>
+
+			<li ng-show="temp.name || temp.amount">
+				<div class="grocery-item" id="grocery-temp">
+					<div class="grocery-placeholder"></div>
+					<div id="grocery-name-temp">{{temp.name}}</div>
+					<div id="grocery-amount-temp">{{temp.amount}}</div>
+					<div class="grocery-placeholder"></div>
+				</div>
+			</li>
+
+			<li ng-repeat="item in completed">
+				<div class="grocery-item">
+					<input ng-click="check(this,'completed')" type="checkbox">
+					<div class="form-control grocery-name grocery-complete">{{item.name}}</div>
+
+					<input type="number" class="form-control grocery-amount grocery-complete" ng-model="item.amount">
+					<i class="fa fa-trash grocery-remove" ng-click="removeItem(this)"></i>
+				</div>
+			</li>
+
 		</ul>
 	</div>
 </div>
