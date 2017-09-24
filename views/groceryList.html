@@ -3,15 +3,14 @@
 
 		<form id="grocery-form" class="form-inline" ng-submit="addItem(temp.name, temp.amount)">
 			<legend id="grocery-title">My Grocery List</legend>
-			<input class="grocery-form-item form-control" ng-model="temp.name" placeholder="Enter item here" required>
-			<input class="grocery-form-item form-control" ng-model="temp.amount" placeholder="Enter amount here" value="1" type="number">
+			<input ng-change="duplicate=false;" class="grocery-form-item form-control" ng-model="temp.name" placeholder="Enter item here" required>
+			<input class="grocery-form-item form-control" ng-model="temp.amount" placeholder="Enter amount here" type="number">
 			<input ng-disabled="!temp.name" class="form-control btn btn-primary" type="submit" value="Submit">
 		</form>
 
 		<div ng-show="duplicate" ng-click="removeWarning()" id="grocery-warning" class="alrt alert-danger">
 			<div class="grocery-placeholder"></div>
 			Whoops, you already added that item!
-
 			<div id="grocery-warning-close"></div>
 		</div>
 
