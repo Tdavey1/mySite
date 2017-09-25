@@ -1,4 +1,4 @@
-angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRouterStyles'])
+angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRouterStyles', 'ngSanitize'])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 

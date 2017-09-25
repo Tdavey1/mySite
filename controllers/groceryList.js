@@ -12,10 +12,7 @@ angular.module('personalSite')
 	var items = {};
 
 	$scope.addItem =function(name, amount) {
-		console.log(name, amount)
-
 		var itemName = name.toLowerCase();
-
 		if (!(itemName in items)) {
 			var item = {}
 			var amount = (amount) ? amount : 1;
@@ -36,7 +33,6 @@ angular.module('personalSite')
 	}
 
 	$scope.check = function(elem, location) {
-		console.log(elem)
 		var index = elem.$index;
 		if (location == 'grocery') {
 			var tmp = $scope.groceryList.splice(index,1)[0];

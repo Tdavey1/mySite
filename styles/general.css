@@ -7,3 +7,13 @@ textarea:focus,
 [tabIndex] {
     outline: none;
 }
+
+.page-header {
+	border-bottom:2px #f6f6f6 solid;
+	padding: 10px 0 10px 0;
+	margin: 0 auto 10px auto;
+}
+
+button {
+	cursor: pointer;
+}

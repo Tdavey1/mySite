@@ -21,7 +21,8 @@
     "ngstorage": "^0.3.11",
     "angular-ui-router-styles": "^1.1.0",
     "bootstrap": "v4.0.0-alpha.6",
-    "progressbar.js": "^1.0.1"
+    "progressbar.js": "^1.0.1",
+    "angular-sanitize": "^1.6.6"
   },
   "resolutions": {
     "angular-ui-router": "^0.3.1"

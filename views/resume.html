@@ -1,123 +1,90 @@
-<div class="container-fluid">
-
-	<div class='page-header offset-lg-1 col-lg-10'>
-		<div class="row justify-content-between align-items-center">
-			<div class="col">
-				<h1>Resume</h1>
-			</div>
-			<div class="col text-right">
-				<a class="btn btn-secondary" target="_self" href="documents/resume.pdf" download="taira_resume.pdf">Download</a>
-			</div>
-		</div>
-	</div>
+<div id="download-container" class="page-header">
+	<h1>Resume</h1>
+	<a class="btn btn-secondary" target="_self" href="documents/resume.pdf" download="taira's_resume.pdf">Download</a>
 </div>
 
 
-<div class="container-fluid text-center">
-	<h1>Taira Davey</h1>
-	<p>
-		(917) 797-0595 • tdavey284@gmail.com • tairad.com<br>
-		2 Deertrack Lane, Irvington, NY 10533
-	</p>
-</div>
+<div id="resume-container">
 
-
-	<div class="container offset-md-1 col-md-10 offset-lg-2 col-lg-8">
-		<div class="section-heading-container">
-			<h3><strong>About Me</strong></h3>
+	<div id="resume-header">
+		<h1 id="name">Taira Davey</h1>
+		<div id="info-container">
+			<p ng-repeat="info in myInfo">{{info}}</p>
 		</div>
-		
-		<p>
-			I switched to programming from pre-med because python was the first class I took where I would stay up late because I wanted to keep working. Since graduating, I’ve devoted the majority of my time to learning new technologies and have gained experience by designing a database and data management app for a lab as well as learning online through freeCodeCamp and codecademy. I am very excited about the work I’m doing and eager to advance my skills in this arena. 
-		</p>
-
-		<div class="section-heading-container">
-			<h3><strong>Education</strong></h3>
-		</div>
-		<div>
-			<div class="row">
-				<div class="col-8">
-					<h5><strong>{{education.cornell.universityName}}</strong>,
-					<small>{{education.cornell.collegeName}}</small></h5>
-				</div>
-				<div class="col-4">
-					<h5 class="text-right"><small><em>{{education.cornell.graduationDate}}</em></small></h5>
-				</div>
-			</div>
-
-			<div>
-				<ul class="list-unstyled">
-					<li>{{education.cornell.degree}}, {{education.cornell.minor}}, GPA: {{education.cornell.gpa}}</li>
-					<li>{{education.cornell.award}}</li>
-				</ul>
-			</div>
-		</div>
-
-		<div>
-			<div class="row">
-				<div class="col-8">
-					<h5><strong>{{education.freeCodeCamp.universityName}}</strong></h5>
-				</div>
-				<div class="col-4">
-					<h5 class="text-right"><small><em>{{education.freeCodeCamp.graduationDate}}</em></small></h5>
-				</div>
-			</div>
-
-			<div>
-				<ul class="list-unstyled">
-					<li ng-repeat="degree in education.freeCodeCamp.degrees">{{degree}}</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="section-heading-container">
-			<h3><strong>Technologies</strong></h3>
-		</div>
-		<ul>
-			<li>HTML/CSS</li>
-			<li>JavaScript
-				<ul>
-					<li>AngularJS</li>
-					<li>Node.js</li>
-				</ul>
-			</li>
-			<li>SQL</li>
-			<li>Python</li>
-		</ul>
-
-		<div class="section-heading-container">
-			<h3><strong>Work Experience</strong></h3>
-		</div>
-		<div ng-repeat="experience in workExperiences">
-			<div class="row">
-				<div class="col-8">
-					<h5><strong>{{experience.jobTitle}}</strong>,
-					<small>{{experience.location}}</small></h5>
-				</div>
-				<div class="col-4">
-					<h5 class="text-right"><small><em>{{experience.timeFrame}}</em></small></h5>
-				</div>
-			</div>
-
-			<div>
-				<ul>
-					<li ng-repeat="detail in experience.details">{{detail}}</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="section-heading-container">
-			<h3><strong>Personal Projects</strong></h3>
-		</div>
-		<div ng-repeat="project in personalProjects">
-			<h5><strong>{{project.name}}</strong></h5>
-			<ul>
-				<li ng-repeat="detail in project.details">{{detail}}</li>
-			</ul>
-		</div>
-
-
-
 	</div>
 
+	<div class="resume-section">
+		<div class="resume-subheader">
+			Education and Certifications
+			<div class="subheader-line"></div>
+		</div>
+		<div ng-repeat="graduation in education" class="resume-subsection">
+			<div class="subsection-details">
+				<p><strong>{{graduation.name}}</strong><small>{{graduation.subTitle}}</small></p>
+				<ul>
+					<li ng-bind-html="detail" ng-repeat="detail in graduation.info"></li>
+				</ul>
+			</div>
+			<div class="time-location">
+				<p>{{graduation.location}}</p>
+				<p>{{graduation.time}}</p>
+			</div>
+		</div>
+	</div>
 
+	<div class="resume-section">
+		<div class="resume-subheader">
+			Work Experience
+			<div class="subheader-line"></div>
+		</div>
+		<div ng-repeat="experience in workExperiences" class="resume-subsection">
+			<div class="subsection-details">
+				<p><strong>{{experience.organization}}</strong></p>
+				<p>{{experience.name}}</p>
+
+				<ul>
+					<li ng-bind-html="detail" ng-repeat="detail in experience.info"></li>
+				</ul>
+			</div>
+			<div class="time-location">
+				<p>{{experience.location}}</p>
+				<p>{{experience.time}}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="resume-section">
+		<div class="resume-subheader">
+			Technologies
+			<div class="subheader-line"></div>
+		</div>
+		<div id="resume-technologies">
+			<div ng-repeat="tech in technologies" class="resume-technology">
+				<img ng-src="{{tech.img}}">
+				<p>{{tech.name}}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="resume-section">
+		<div class="resume-subheader">
+			Other Experience
+			<div class="subheader-line"></div>
+		</div>
+		<div ng-repeat="experience in otherExperiences" class="resume-subsection">
+			<div class="subsection-details">
+				<p><strong>{{experience.organization}}</strong></p>
+				<p>{{experience.name}}</p>
+
+				<ul>
+					<li ng-bind-html="detail" ng-repeat="detail in experience.info"></li>
+				</ul>
+			</div>
+			<div class="time-location">
+				<p>{{experience.location}}</p>
+				<p>{{experience.time}}</p>
+			</div>
+		</div>
+	</div>
+
+</div>

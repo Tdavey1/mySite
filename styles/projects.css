@@ -4,7 +4,9 @@
 	cursor: pointer;
 }
 
-
+.project:hover {
+	transform: scale(1.05);
+}
 
 @media (min-width: 950px) {
 	.project {
