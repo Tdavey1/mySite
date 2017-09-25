@@ -12,7 +12,7 @@ angular.module("personalSite")
 			name:"Cornell University, ",
 			subTitle: "College of Agriculture and Life Sciences",
 			info: [
-				"B.S in Biological Sciences, cum laude with distinction in research",
+				"B.S in Biological Sciences, <em>cum laude</em> with distinction in research",
 				"GPA: 3.54, Minor in Business"
 			],
 			location: "Ithaca, New York",
@@ -35,7 +35,7 @@ angular.module("personalSite")
 				"Verify <a target='_blank' href='https://www.freecodecamp.org/tdavey1/front-end-certification'>here</a>"
 			],
 			location: "freecodecamp.com",
-			time: "March 2016",
+			time: "April 2017",
 
 		},
 		{
