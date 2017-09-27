@@ -28,15 +28,24 @@ angular.module('personalSite')
 		}
 	}
 
+	$scope.plop = function(a,location) {
+		console.log(a);
+		var index = a.$index;
+		console.log(index)
+		if (location == 'grocery') {
+			var tmp = $scope.groceryList.splice(0,1);
+		}
+	}
+
 	$scope.removeWarning = function() {
 		$scope.duplicate = false;
 	}
 
 	$scope.check = function(elem, location) {
+		console.log(elem);
 		var index = elem.$index;
 		if (location == 'grocery') {
 			var tmp = $scope.groceryList.splice(index,1)[0];
-			console.log(tmp)
 			$scope.completed.push(tmp);
 
 		} else {

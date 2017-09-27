@@ -37,7 +37,7 @@
 
 			<li ng-repeat="item in completed">
 				<div class="grocery-item">
-					<input ng-click="check(this,'completed')" type="checkbox">
+					<input checked ng-click="check(this,'completed')" type="checkbox">
 					<div class="form-control grocery-name grocery-complete">{{item.name}}</div>
 
 					<input type="number" class="form-control grocery-amount grocery-complete" ng-model="item.amount">

@@ -1,5 +1,26 @@
 angular.module('personalSite')
 .controller('PomodoroCtrl', function($scope) {
+
+	$scope.$on('$destroy', function() {
+		reset();
+	});
+
+
+	function reset() {
+		$('#interval').stop();
+		$('#interval').animate({'right':'1240px'},200,'linear');
+		$('.ball').addClass('red');
+		$('.ball').removeClass('green');
+		$("#go").removeClass('hidden');
+		$("#pause").addClass('hidden');
+		clearInterval(intervalTime);
+		intervalTime=false;
+		timerLength = workMin * 60;
+		time = getTime(timerLength);
+		$('#clock').html(time);
+	}
+
+
 	var addInterval = function(amount) {
 		for (var i=0;i<amount;i++) {
 			if (i%10==0) {
@@ -58,7 +79,6 @@ angular.module('personalSite')
 
 
 	$('#go').on('click', function() {
-		console.log("clicked");
 		$("#go, #pause").toggleClass('hidden');
 		if (!intervalTime) {
 			startTimer();
@@ -66,17 +86,7 @@ angular.module('personalSite')
 	})
 
 	$('#reset').on('click', function() {
-		$('#interval').stop();
-		$('#interval').animate({'right':'1240px'},200,'linear');
-		$('.ball').addClass('red');
-		$('.ball').removeClass('green');
-		$("#go").removeClass('hidden');
-		$("#pause").addClass('hidden');
-		clearInterval(intervalTime);
-		intervalTime=false;
-		timerLength = workMin * 60;
-		time = getTime(timerLength);
-		$('#clock').html(time);
+		reset();
 	})
 
 	$('#pause').on('click', function() {
@@ -112,7 +122,6 @@ angular.module('personalSite')
 
 	$('#workAdd').on('click',function() {
 		workMin+=1;
-		console.log("clicked2");
 		$('#workTime').text(workMin)
 	})
 
