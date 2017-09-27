@@ -2,10 +2,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 #resume-container {
-	min-width: 400px;
 	max-width: 816px;
 	margin: auto;
 }
