@@ -1,52 +1,59 @@
-.project {
-	display:inline-block;
-	margin: 0 5px 10px 5px;
-	cursor: pointer;
-}
-
-.project:hover {
-	transform: scale(1.05);
-}
-
-@media (min-width: 950px) {
-	.project {
-		max-width: 20%;
-	}
-}
-
-@media (min-width: 650px) and (max-width : 950px)  {
-	.project {
-		max-width: 30%;
-	}
-}
-
-@media (min-width: 400px) and (max-width : 650px)  {
-	.project {
-		max-width: 45%;
-	}
-}
-
-@media (min-width: 400px) and (max-width : 400px)  {
-	.project {
-		max-width: 80%;
-	}
-}
-
-.project-container {
-	background-color:#d3d3d3;
+.technology-container {
+	background-color:#d2d2d2;
 	margin: 0 0 10px 0;
 	border-radius:10px;
-	border: 5px solid #acacac;
+	border: 2px solid #acacac;
 }
 
 .logo-container {
 	height:3rem;
 	padding: 5px 0 5px 0;
-	margin: 0 0 10px 0;
-	border-bottom: 5px solid #acacac;
+	border-bottom: 2px solid #acacac;
 }
 
 .logo {
 	max-height:100%;
 	max-width:100%;
+}
+
+.project-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-evenly;
+	padding: 10px 0 10px 0;	
+}
+
+.project {
+	display:inline-block;
+	cursor: pointer;
+	margin: 10px 5px 10px 5px;
+}
+
+.project:hover {
+	transform: scale(1.03);
+}
+
+@media (min-width: 950px) {
+	.project {
+		flex-basis: 23%;
+	}
+}
+
+@media (min-width: 700px) and (max-width : 950px)  {
+	.project {
+		flex-basis:  31%;
+	}
+}
+
+@media (min-width: 500px) and (max-width : 700px)  {
+	.project {
+		flex-basis:  45%;
+	}
+}
+
+@media (min-width: 200px) and (max-width : 500px)  {
+	.project {
+		flex-basis:  80%;
+	}
 }

@@ -2,15 +2,16 @@
 	<h1>My projects</h1>
 </div>
 
-<div ng-repeat="library in libraries" class="text-center project-container">
+<div ng-repeat="tech in technologies" class="text-center technology-container">
 	<div class="logo-container">
-		<img class="logo" ng-src="{{library.img}}" />
+		<img class="logo" ng-src="{{tech.img}}" />
 	</div>
-	<div class="card project" ng-click="openModal(this.project)" ng-repeat="project in library.projects">
-
-		<img class="card-img-top img-fluid" ng-src="{{project.img}}">
-		<div class="card-footer text-center">
-			<small class="text-muted">{{project.name}}</small>
+	<div class="project-container">
+		<div class="card project" ng-click="openModal(this.project)" ng-repeat="project in tech.projects">
+			<img class="card-img-top img-fluid" ng-src="{{project.img}}">
+			<div class="card-footer text-center">
+				<small class="text-muted">{{project.name}}</small>
+			</div>
 		</div>
 	</div>
 

@@ -24,7 +24,7 @@ angular.module('personalSite')
 
 	}
 
-	$scope.libraries = [
+	$scope.technologies = [
 		{
 			name:"jQuery",
 			color: "#0769ad",
