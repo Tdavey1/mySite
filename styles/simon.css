@@ -1,51 +1,55 @@
 .background {
 	background-color:grey;
 	border-radius:50%;
-	height:30em;
-	width:30em;
+	height:500px;
+	width:500px;
 	margin:auto auto auto auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border: 20px solid grey;
 }
 
 .option {
-	height:13.5em;
-	width:13.5em;
+	flex-basis: 48%;
 }
 
 #green {
 	background-color:#00b200;
 	border-top-left-radius:100%;
-	margin: 1em .5em .5em 1em;
+	margin-bottom: 10px;
 }
 
 #red {
 	background-color:#b20000;
 	border-top-right-radius:100%;
-	margin: 1em 1em .5em .5em;
+	margin-bottom: 10px;
 }
 
 #yellow {
 	background-color:#d6d630;
 	border-bottom-left-radius:100%;
-	margin: .5em .5em 1em 1em;
+	margin-top: 10px;
 }
 
 #blue {
 	background-color:#0000b2;
 	border-bottom-right-radius:100%;
-	margin: .5em 1em 1em .5em;
+	margin-top: 10px;
 }
 
 #center {
 	position:absolute;
 	background-color:#f0ead6;
-	height:17em;
-	width:17em;
-	top:6.5em;
-	left:6.5em;
+	height:250px;
+	width:250px;
 	border-radius:50%;
 	border: 15px solid grey;
 	text-align:center;
-	padding-top:1.5em
+	margin-top: 105px;
+	margin-left: 105px;
+	margin-bottom: 105px;
+	padding: 10px;
 }
 
 #title {
@@ -55,8 +59,8 @@
 #display {
 	background-color:black;
 	color:#b83939;
-	width:60%;
-	height:3em;
+	width:100px;
+	height:45px;
 	border-radius:5px;
 	border:1px solid grey;
 	margin:auto;
@@ -64,56 +68,131 @@
 
 #simon-start {
 	border-radius:50%;
-	height:3em;
-	width:3em;
+	height:50px;
+	width:50px;
 	background-color:green;
 	border:3px black solid;
 	margin:5px;
-	padding-top:11px;
+	font-size:13px;
+	font-weight:bold; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #simon-restart {
 	border-radius:50%;
-	height:3em;
-	width:3em;
+	height:50px;
+	width:50px;
 	background-color:orange;
 	border:3px black solid;
 	margin:5px;
-	padding-top:11px;
+	font-size:13px;
+	font-weight:bold; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #strict {
-	display:inline;
 	border-radius:50%;
-	height:3em;
-	width:3em;
+	height:50px;
+	width:50px;
 	background-color:pink;
 	border:3px black solid;
 	margin:5px;
-	padding-top:11px;
-}
-
-#btn-container {
-	margin-top:1em;
-}
-
-.btn-text {
 	font-size:13px;
 	font-weight:bold; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #switch {
 	background-color: #a8a8a8;
-	width:2.8em;
-	height:1.5em;
+	width:50px;
+	height:25px;
 	margin:auto;
 	border-radius:24px;
-	text-align:left;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #toggle {
-	display: inline-block;
 	background-color: white;
-	height: 1.3em;
-	width: 1.3em;
+	height: 19px;
+	width: 19px;
 	border-radius:50%;
-	margin:.1em .2em 0 .2em;
+	margin: 0 4px 0 4px;
+}
+
+@media (max-width : 600px)  {
+	.background {
+		height: 80vw;
+		width: 80vw;
+		border: 3vw solid grey;
+	}
+
+	#green, #red {
+		margin-bottom: 1.5vw;
+	}
+
+	#yellow, #blue {
+		margin-top: 1.5vw;
+	}
+
+	#center {
+		height:40vw;
+		width:40vw;
+		border: 3vw solid grey;
+		margin-top: 16.8vw;
+		margin-left: 16.8vw;
+		padding: 10px;
+	}
+
+	#title {
+		font-size: 5vw;
+	}
+
+	#display {
+		width:16vw;
+		height:7.2vw;
+	}
+
+	#simon-start {
+		height: 8vw;
+		width: 8vw;
+		border:.5vw black solid;
+		margin:1px;
+		font-size:2vw;
+	}
+	#simon-restart {
+		height: 8vw;
+		width: 8vw;
+		border:.5vw black solid;
+		margin:1px;
+		font-size:2vw;
+	}
+	#strict {
+		height: 8vw;
+		width: 8vw;
+		border:.5vw black solid;
+		margin:1px;
+		font-size:2vw;
+	}
+	
+	#btn-container {
+		margin-top: 1vw;
+	}
+
+	#switch {
+		width: 8vw;
+		height: 4vw;
+		border-radius:24px;
+	}
+
+	#toggle {
+		height: 3vw;
+		width: 3vw;
+		margin: 0 .6vw 0 .6vw;
+	}
 }

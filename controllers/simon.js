@@ -176,13 +176,13 @@ angular.module('personalSite')
 		if (game.on) {
 			game.on = false;
 			$("#switch").css("background-color","#a8a8a8");
-			$("#switch").css("text-align","left");
+			$("#switch").css("justify-content","flex-start");
 			$("#display").css("color", "#b83939");
 			game.stop();
 		} else {
 			game.on = true;
 			$("#switch").css("background-color","#00e5e5");
-			$("#switch").css("text-align","right");
+			$("#switch").css("justify-content","flex-end");
 			$("#display").css("color", "red");
 		}
 	})

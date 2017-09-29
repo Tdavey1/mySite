@@ -13,13 +13,13 @@ angular.module('personalSite')
 		})
 
 		modalInstance.opened.then(function () {
-			
+
 		});
 		modalInstance.result.then(function () {
-			
+
 		});
 		modalInstance.result.catch(function(){
-			
+
 		});
 
 	}

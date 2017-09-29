@@ -10,9 +10,13 @@ angular.module("personalSite")
 
 	$scope.notes = [];
 
-	$scope.addNote = function() {
-		var leftPos = Math.floor(Math.random() * (600-210));
-		var topPos = Math.floor(Math.random() * (500-210));
+	$scope.addNote = function(elem, e) {
+		var stage = angular.element( document.querySelector( '#stage-notes' ) )[0];
+		var width = stage.offsetWidth;
+		var height = stage.offsetHeight;
+
+		var leftPos = Math.floor(Math.random() * (width-210));
+		var topPos = Math.floor(Math.random() * (height-210));
 		var rotate = Math.random() * 10 - 5;
 		var color = colors[Math.floor(Math.random() * colors.length) ];
 
@@ -29,6 +33,9 @@ angular.module("personalSite")
 	$scope.deleteNote = function(elem) {
 		var index = elem.$index;
 		$scope.notes.splice(index,1);
+		if (index == front) {
+			front = 0;			
+		}
 	}
 	
 	$scope.clearAll = function() {

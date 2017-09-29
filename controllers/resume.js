@@ -31,7 +31,7 @@ angular.module("personalSite")
 			name: "freeCodeCamp",
 			info: [
 				"Completed a 400-hour Front End Development Certification",
-				"Relevent Coursework: jQuery, HTML, CSSS",
+				"Relevent Coursework: jQuery, HTML, CSS",
 				"Verify <a target='_blank' href='https://www.freecodecamp.org/tdavey1/front-end-certification'>here</a>"
 			],
 			location: "freecodecamp.com",
