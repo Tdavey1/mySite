@@ -1,1 +1,1 @@
-# resume
+Just making a site to hold my resume and projects.

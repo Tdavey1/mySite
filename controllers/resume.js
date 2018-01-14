@@ -4,11 +4,19 @@ angular.module("personalSite")
 	$scope.myInfo = [
 		"(917) 797-0595",
 		"td284@cornell.edu",
-		"2 Deertrack Lane, Irvington, NY 10533"
-	]
+		"Irvington, NY 10533"
+	];
 
 	$scope.education = [
 		{
+			name:"Cornell University, ",
+			subTitle: "Graduate School",
+			info: [
+				"MPS in Information Science"
+			],
+			location: "Ithaca, New York",
+			time: "Expected December 2018"
+		},		{
 			name:"Cornell University, ",
 			subTitle: "College of Agriculture and Life Sciences",
 			info: [
@@ -46,7 +54,7 @@ angular.module("personalSite")
 			],
 			location: "CompTIA",
 			time: "August 2017",
-		},
+		}/*,
 		{
 			name: "Data Structures and Algorithms Certifications",
 			info: [
@@ -67,7 +75,7 @@ angular.module("personalSite")
 			],
 			location: "University of Texas System",
 			time: "September 2017",
-		}
+		}*/
 	];
 
 	$scope.workExperiences = [
@@ -108,17 +116,16 @@ angular.module("personalSite")
 
 
 	$scope.technologies = [
+		{name: "Java", img: "images/java.png"},
+		{name: "Python", img: "images/python.png"},
+		{name: "SQL", img: "images/sql.png"},
 		{name: "HTML", img: "images/html.png"},
 		{name: "CSS", img: "images/css.png"},
 		{name: "JavaScript", img: "images/javascript.png"},
 		{name: "jQuery", img: "images/jquery.png"},
 		{name: "AngularJS", img: "images/angular.png"},
-		{name: "Node.js", img: "images/node.png"},
-		{name: "Java", img: "images/java.png"},
-		{name: "Python", img: "images/python.png"},
-		{name: "SQL", img: "images/sql.png"},
-		
-	]
+		{name: "Node.js", img: "images/node.png"}		
+	];
 
 	$scope.otherExperiences = [
 		{

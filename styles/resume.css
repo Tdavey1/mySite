@@ -28,7 +28,7 @@
 #info-container > p {
 	text-align: right;
 	margin: 0;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .resume-subheader {
@@ -49,7 +49,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .time-location {

@@ -3,7 +3,7 @@ angular.module('personalSite', ['ui.router', 'ui.bootstrap','ngStorage','uiRoute
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
 
-	$urlRouterProvider.otherwise("/about");
+	$urlRouterProvider.otherwise("/resume");
 //	$locationProvider.html5Mode(true);
 
 	//you define states in the config part of your app.js
